@@ -1,0 +1,13 @@
+ru:
+  activemodel:
+    attributes:
+      order:
+        name: Имя
+        email: E-mail
+        address: Адрес
+        phone: Телефон
+        comment: Комментарий
+  helpers:
+    submit:
+      order:
+        create: "Отправить заказ"

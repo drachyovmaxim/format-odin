@@ -1,0 +1,12 @@
+defaults: &defaults
+  admin_email: test@example.org
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  admin_email: hello@whitewallsproblems.com

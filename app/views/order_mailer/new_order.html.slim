@@ -1,0 +1,13 @@
+h2 Ура! У Вас новый заказ!
+
+.text Кажется кто-то хочет купить работу #{ link_to @order.artwork.title, artwork_path( @order.artwork, only_path: false ) }.
+.contacts
+  .span Вот его контактные данные:
+  .span Имя: #{ @order.name }
+  .span Email: #{ @order.email }
+  .span Адрес: #{ @order.address }
+  .span Телефон: #{ @order.phone }
+  .span IP-адрес: #{ @order.ip }
+  .spam Время заказа: #{ @order.created_at }
+- unless @order.comment.empty?
+	.comment Также пользователь оставил комментарий: "#{ @order.comment }"

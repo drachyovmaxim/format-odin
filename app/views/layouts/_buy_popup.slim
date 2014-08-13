@@ -1,0 +1,14 @@
+.popup-wrapper-buy id='buy-popup-#{ artwork.id }'
+  .transparent
+  .popup-close = image_tag("close.svg")
+  .buy-form
+    h2 Купить принт
+    .form
+      = simple_form_for Order.new, remote: true do |f|
+        = f.input :name
+        = f.input :email
+        = f.input :address
+        = f.input :phone
+        = f.input :comment, as: :text
+        = f.hidden_field :artwork_id, value: artwork ? artwork.id : @artwork.id
+        .buy-popup = f.submit

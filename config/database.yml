@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: qweqwe
+  host: localhost
+
+development:
+  <<: *default
+  database: whitewalls_development
+
+test:
+  <<: *default
+  database: whitewalls_test
+
+production:
+  <<: *default
+  database: whitewalls_production

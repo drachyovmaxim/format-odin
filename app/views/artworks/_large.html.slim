@@ -1,0 +1,19 @@
+= render 'layouts/buy_popup', artwork: artwork
+.big
+  .large
+    .wrapper
+      = link_to image_tag(artwork.image.medium.url), artwork.image.url, class: [ "link", "image-link" ]
+      .content
+        = link_to artwork.artist.name, artwork.artist, class: "author"
+        = link_to artwork.title, artwork, class: "title"
+        .description= artwork.description.html_safe
+        .price= in_rubbles(artwork.price)
+        #buy-print.buy data-popup-id='buy-popup-#{ artwork.id }' = "Купить принт"
+      .share
+        .share-message Поделиться с друзьями:
+        ul
+          li.icon
+            / TODO: move it to helper
+          	a.fb target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?u=#{ artwork_path artwork, only_path: false }" f 
+          li.icon
+            a.vk target="_blank" href="http://www.vk.com/share.php?url=#{ artwork_path artwork, only_path: false }" v

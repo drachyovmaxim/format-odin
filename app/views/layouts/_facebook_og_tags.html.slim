@@ -1,0 +1,6 @@
+- if content_for?(:facebook_title)
+	meta property="og:title" content="#{ yield :facebook_title }"
+- if content_for?(:facebook_description)
+	meta property="og:description" content="#{ yield :facebook_description }"
+- if content_for?(:facebook_image)
+	meta property="og:image" content="#{ yield :facebook_image }"

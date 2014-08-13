@@ -1,0 +1,51 @@
+$support-moz:    true;
+$support-webkit: true;
+$support-ms:     true;
+$support-o:      true;
+$support-def:    true;
+$color-link: #456fee;
+$color-white: #fff;
+
+@mixin font_museo_sans_cyrl($size:500) {
+  font-family: "museo_sans_cyrl_#{$size}", "Helvetica", "Arial", "Sans-Serif";
+  font-weight: $size;
+}
+
+@mixin button {
+  padding: 15px;
+  border: 2px solid $color-link;
+  @include font_museo_sans_cyrl(500);
+  font-size: $font-size-medium;
+  color: $color-link;
+  width: 140px;
+  margin-top: 20px;
+  text-align: center;
+  @include transition(all .2s ease);
+
+  &:hover {
+    background-color: $color-link;
+    color: $color-white;
+  }
+}
+
+@mixin сross-browser($key, $value) {
+  @if $support-moz {
+    -moz-#{$key}: #{$value};
+  }
+  @if $support-webkit {
+    -webkit-#{$key}: #{$value};
+  }
+  @if $support-ms {
+    -ms-#{$key}: #{$value};
+  }
+  @if $support-o {
+    -o-#{$key}: #{$value};
+  }
+  @if $support-def {
+    #{$key}: #{$value};
+  }
+}
+
+@mixin transition($text) {
+  @include сross-browser("transition", $text);
+}

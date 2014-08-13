@@ -1,0 +1,7 @@
+.artist-name
+	= @artist.name.html_safe
+.artist-bio
+	= @artist.bio.html_safe
+.artworks
+	h2 Все принты этого автора
+	= render @artist.artworks

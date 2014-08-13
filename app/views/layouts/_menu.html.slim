@@ -1,0 +1,11 @@
+ul.menu-right
+  li#about-popup.transparent-menu
+    = "О нас"
+  li#about-popup-contacts.transparent-menu 
+    = "Контакты"
+.logo class="page-#{current_page}"
+  = link_to image_tag("logo.svg"), root_path
+ul.menu-left
+  li.transparent-menu = link_to 'Все принты', artworks_path, class: ('active' if current_page?(artworks_path))
+  li.transparent-menu 
+    a href="http://blog.whitewalls.gallery/" target="blank" Блог

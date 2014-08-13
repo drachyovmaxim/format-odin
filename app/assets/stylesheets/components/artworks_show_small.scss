@@ -1,0 +1,53 @@
+.other {
+  max-width: $main-width;
+  margin: 0 auto;
+  padding: 45px $padding;
+
+  .artwork {
+    width: $artwork-width;
+    margin-right: ($width - $artwork-width*3)/2;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    @include font_museo_sans_cyrl(300);
+
+    &:first-child {
+      margin-bottom: $padding*2;
+    }
+
+    a {
+      display: block;
+    }
+
+    .artist {
+      font-size: $font-size-small;
+      color: $color-gray;
+      margin-top: 8px;
+    }
+
+    .title {
+      @include font_museo_sans_cyrl(500);
+      font-size: 1.1em;
+      margin-top: 7px;
+      line-height: 1.4;
+    }
+
+    .price {
+      color: $color-link;
+      font-size: $font-size-small;
+      margin-top: 8px;
+    }
+
+    img {
+      width: 100%;
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
