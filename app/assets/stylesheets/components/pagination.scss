@@ -1,0 +1,30 @@
+.pagination-wrapper {
+  background-color: $color-gray-light;
+
+  .pagination {
+    padding: $padding;
+    max-width: $main-width;
+    margin: 0 auto;
+    text-align: center;
+
+    .page.current {
+      @include font_museo_sans_cyrl(500);
+    }
+    .page {
+      display: inline-block;
+      margin-right: $padding/2;
+      font-size: 1.2em;
+
+      a {
+        color: $color-gray-dark;
+
+        &:hover {
+          color: $color-link;
+        }
+      }
+    }
+    .gap, .first, .prev, .next, .last {
+      display: none;
+    }
+  }
+}

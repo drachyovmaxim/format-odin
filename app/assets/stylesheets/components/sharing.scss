@@ -1,0 +1,29 @@
+.share {
+  margin-top: $padding/2;
+  .share-message, ul {
+    display: inline-block;
+  }
+  .share-message {
+    font-size: .85em;
+    margin-right: 10px;
+    color: $color-gray;
+  }
+  ul li {
+    display: inline-block;
+  }
+  a {
+    border: 2px solid #4c66a4;
+    padding: 8px;
+    color: #4c66a4;
+    margin-right: 5px;
+    &:hover {
+      color: $color-banner;
+      background: #4c66a4;
+    }
+  }
+  .vk {
+    border: 2px solid #4a74a4;
+    color: #4a74a4;
+    &:hover { background: #4a74a4; }
+  }
+}

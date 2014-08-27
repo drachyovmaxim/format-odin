@@ -1,0 +1,71 @@
+.big {
+  background-color: $color-banner;
+
+  .large {
+    max-width: $main-width;
+    margin: 0 auto;
+    padding: $padding*1.5 $padding;
+  }
+
+  .link {
+    display: inline-block;
+    vertical-align: middle;
+    width: 42%;
+    margin-right: 5%;
+  }
+
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .content {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 550px;
+    width: 53%;
+  }
+
+  .author {
+    color: $color-gray-dark;
+    font-size: $font-size-medium;
+  }
+
+  .title {
+    @include font_museo_sans_cyrl(500);
+    font-size: 2.7em;
+    line-height: 1.3;
+    margin-top: 7px;
+    margin-bottom: 6px;
+  }
+
+  .description {
+    color: $color-gray-dark;
+    line-height: 1.9;
+  }
+
+  .price {
+    @include font_museo_sans_cyrl(500);
+    font-size: 1em;
+    margin-top: 14px;
+    color: $color-black;
+  }
+
+  .buy {
+    padding: 15px;
+    border: 2px solid $color-link;
+    @include font_museo_sans_cyrl(500);
+    font-size: $font-size-medium;
+    color: $color-link;
+    width: 140px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    @include transition(all .2s ease);
+
+    &:hover {
+      background-color: $color-link;
+      color: $color-banner;
+    }
+  }
+}

@@ -7,12 +7,12 @@ default: &default
 
 development:
   <<: *default
-  database: format-odin_development
+  database: whitewalls_development
 
 test:
   <<: *default
-  database: format-odin_test
+  database: whitewalls_test
 
 production:
   <<: *default
-  database: format-odin_production
+  database: whitewalls_production

@@ -1,6 +1,6 @@
 .group class="page-#{current_page}"
-	/ .big
-	/ 	- if large = group.shift
-	/ 		= render 'artworks/large', artwork: large
+	.big
+		- if large = group.shift
+			= render 'artworks/large', artwork: large
 	.other
-		= render @artworks
+		= render group

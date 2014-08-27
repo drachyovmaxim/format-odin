@@ -1,0 +1,79 @@
+.content {
+  .group {
+    margin-top: 0px;
+  }
+  .artworks {
+    max-width: $main-width;
+    margin: 0 auto;
+    padding: 0 $padding;
+
+    .artwork {
+      width: $artwork-width;
+      margin-right: ($width - $artwork-width*3)/2;
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      vertical-align: top;
+      @include font_museo_sans_cyrl(300);
+      margin-bottom: $padding*2;
+
+      &:nth-child(3n+1) {
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+      }
+
+      .artist {
+        font-size: $font-size-small;
+        color: $color-gray;
+        margin-top: 8px;
+      }
+
+      .title {
+        @include font_museo_sans_cyrl(500);
+        font-size: 1.1em;
+        margin-top: 7px;
+        line-height: 1.4;
+      }
+
+      .price {
+        color: $color-link;
+        font-size: $font-size-small;
+        margin-top: 8px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      padding: 0 $padding $padding/2;
+      border-bottom: 1px solid $color-gray-light;
+      margin-bottom: $padding*1.5;
+      @include font_museo_sans_cyrl(300);
+      font-size: $font-size-medium;
+      color: $color-gray;
+    }
+  }
+}
+
+.artist-name {
+  text-align: center;
+  padding: 60px $padding $padding/2.5;
+  @include font_museo_sans_cyrl(300);
+  font-size: 4em;
+}
+
+.artist-bio {
+  max-width: 1000px;
+  text-align: center;
+  color: $color-gray-dark;
+  margin: 0 auto;
+  font-size: 0.875em;
+  line-height: 1.6;
+  margin-bottom: $padding
+}

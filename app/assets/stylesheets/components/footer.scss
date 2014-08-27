@@ -1,0 +1,102 @@
+.footer {
+  background-color: white;
+
+  .footer-wrapper {
+    border-top: 1px solid $color-gray-light;
+    padding: $padding;
+    position: relative;
+    background-color: white;
+  }
+
+  .partners {
+    max-width: $main-width;
+    margin: 0 auto;
+    text-align: center;
+    p {
+      color: $color-gray;
+      padding-top: 0;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+    .blou {
+      img { height: 37px; }
+    }
+    .buro img {
+      height: 60px;
+      margin-top: 18px;
+    }
+    .pop {
+      img { height: 65px; }
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 60px;
+      &:last-child { margin-right: 0; }
+      &:hover { opacity: .8; }
+      img {
+        height: 40px;
+      }
+    }
+  } 
+
+  .other-content {
+    padding: $padding;
+    position: relative;
+    background-color: $color-gray-light;
+    .copywrite {
+      color: $color-gray;
+      display: inline-block;
+      margin-right: $padding;
+    }
+
+    .menu {
+      display: inline-block;
+      li {
+        display: inline-block;
+        margin-right: $padding/2;
+        cursor: pointer;
+        @include transition(all .2s ease);
+        &:hover {
+          color: $color-link;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .social {
+      position: absolute;
+      top: 22px;
+      right: 0;
+      right: $padding;
+
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        padding-bottom: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: $color-white;
+          font-family: 'icomoon';
+          padding-bottom: 0;
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 100px;
+          display: inline-block;
+          background-color: #999;
+        }
+      }
+
+      .fb {
+        &:hover {
+          background-color: #3D5A99;
+        }
+      }    
+    }
+  }  
+}
