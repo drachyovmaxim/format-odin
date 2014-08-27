@@ -1,5 +1,7 @@
-.artwork
-  .image= link_to image_tag(artwork.image.preview.url), artwork
+.print
+  .image
+    = link_to image_tag(artwork.image.preview.url), artwork
   = link_to artwork.artist.name, artwork, class: "artist"
   = link_to artwork.title, artwork, class: "title"
+  = link_to artwork.description, artwork, class: "title"
   = link_to in_rubbles(artwork.price), artwork, class: "price"
