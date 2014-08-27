@@ -1,4 +1,2 @@
-- @artworks.in_groups_of(7, false) do |group|
-	= render 'artworks/group', group: group
-.pagination-wrapper
-  = paginate @artworks
+.prints class="page-#{current_page}"
+  = render @artworks

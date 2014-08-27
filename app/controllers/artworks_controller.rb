@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
   def index
-  	@artworks = Artwork.newest.page params[:page]
+  	@artworks = Artwork.newest.limit(6)
   end
 
   def show
