@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-titles = ['Sun', 'Moon', 'Storm', 'Scream', 'Howl', 'Life and Death', 'Jupiter', 'Mars', 'Space', 'Tree', 'Face', 'Somebody', 'Lace']
+titles = ['Алексей Кио', 'Глаз искроментый', 'Чернуха', 'Поганка', 'Посмотри у себя в штанах']
 
-Artist.find_or_create_by_name('Von Goh')
+Artist.find_or_create_by_name('Саша Захаренко')
 
 def fixtures_path
   Rails.root.join("db/fixtures/")
