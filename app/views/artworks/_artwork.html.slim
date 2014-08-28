@@ -1,7 +1,13 @@
-.print
-  .image
-    = link_to image_tag(artwork.image.preview.url), artwork
-  = link_to artwork.artist.name, artwork, class: "artist"
-  = link_to artwork.title, artwork, class: "title"
-  = link_to artwork.description, artwork, class: "title"
-  = link_to in_rubbles(artwork.price), artwork, class: "price"
+li.print
+  .print-img
+    = image_tag(artwork.image.medium.url)
+  .print-info
+    h2
+      = link_to artwork.title, artwork, class: "title"
+    p.description
+      = artwork.description
+    = link_to artwork.artist.name, artwork, class: "artist"
+    .price
+      = in_rubbles(artwork.price)
+    = link_to "Узнать больше", artwork
+    #buy-print.buy data-popup-id='buy-popup-#{ artwork.id }' = "Купить принт"

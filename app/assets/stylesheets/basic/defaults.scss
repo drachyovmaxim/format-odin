@@ -6,20 +6,16 @@ html {
 
 body {
   font-size: $font-size;
-  @include font_museo_sans_cyrl(300);
-  background-color: $color-white;
+  background: $color-body;
+  @include nowie_regular;
   color: $color-black;
   -webkit-font-smoothing: antialiased;
-  margin: 0 auto;
-  min-width: 900px;
-}
-
-p {
+  padding: 0;
   margin: 0;
 }
 
 a {
-  color: $color-black;
+  color: $color-link;
   text-decoration: none;
   display: block;
   @include transition(all .2s ease);
@@ -51,20 +47,26 @@ a {
   }
 }
 
-h1 {
-  margin: 0;
-  @include font_museo_sans_cyrl(300);
-  font-size: 4em;
-}
-
-h2 {
-  margin: 0;
-  @include font_museo_sans_cyrl(500);
-  font-size: 1.3em;
-}
-
 ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+h1, h2 ,h3, h4, p {
+  margin: 0;
+  padding: 0;
+  @include nowie_bold;
+}
+
+p {
+  font-size: 1em;
+  @include nowie_light;
+}
+
+h1 { font-size: 3.4em; }
+
+h2 {
+  font-size: 2.2em;
+  line-height: 1.2;
 }

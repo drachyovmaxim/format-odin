@@ -3,12 +3,20 @@ $support-webkit: true;
 $support-ms:     true;
 $support-o:      true;
 $support-def:    true;
-$color-link: #456fee;
-$color-white: #fff;
 
-@mixin font_museo_sans_cyrl($size:500) {
-  font-family: "museo_sans_cyrl_#{$size}", "Helvetica", "Arial", "Sans-Serif";
-  font-weight: $size;
+@mixin nowie_light {
+  font-family: "nowie_vremenalight", "Helvetica", "Arial", "Sans-Serif";
+  font-weight: normal;
+}
+
+@mixin nowie_regular {
+  font-family: "nowie_vremenaregular", "Helvetica", "Arial", "Sans-Serif";
+  font-weight: normal;
+}
+
+@mixin nowie_bold {
+  font-family: "nowie_vremenabold", "Helvetica", "Arial", "Sans-Serif";
+  font-weight: normal;
 }
 
 @mixin button {
