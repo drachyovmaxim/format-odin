@@ -1,0 +1,21 @@
+.header {
+  .logo {
+    margin-left: $padding*3;
+    margin-top: $padding;
+    img {
+      height: 25px;
+      display: block;
+    }
+  }
+  .menu {
+    position: absolute;
+    right: $padding*3;
+    top: 34px;
+  }
+  li {
+    display: inline-block;
+    font-size: .85em;
+    margin-left: 20px;
+    &:first-child { margin-left: 0; }
+  }
+}

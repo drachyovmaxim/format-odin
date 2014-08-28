@@ -3,9 +3,12 @@
   overflow: hidden;
   position: absolute;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
+  top: 53%;
   transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
 }
 
 .prints ul {
@@ -17,7 +20,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 650px;
-  margin: 0 $padding*3;
+  margin: 0 $padding*5 0 $padding*3;
   white-space: nowrap;
 }
 
@@ -28,7 +31,9 @@
   }
   h2 a {
     color: $color-black;
-    margin-bottom: $padding/3;
+    &:hover {
+      color: $color-link;
+    }
   }
   p {
     color: $color-gray-dark;
@@ -37,14 +42,31 @@
   }
   img {
     width: 100%;
-    height: 100%;
   }
   .print-img {
-    width: 60%;
-    margin-right: 2%;
+    width: 55%;
+    margin-right: 7%;
   }
   .print-info {
     width: 38%;
     white-space: normal;
   }
+  .artist-info {
+    font-size: .85em;
+    @include nowie_light;
+    color: $color-gray-dark;
+    margin-top: $padding/2;
+  }
+  .artist {
+    margin-left: 5px;
+    @include nowie_regular;
+  }
+  .artist-title, .artist {
+    display: inline-block;
+  }
+  .price, .history, .buy {
+    margin-top: $padding/2;
+    font-size: .85em;
+  }
+  .buy { margin-top: 5px; }
 }
