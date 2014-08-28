@@ -25,6 +25,6 @@ end
 		year: rand(1950..2013),
 		price: rand(1..20000),
 		artist: Artist.last,
-		remote_image_url: image
+		image: image
 	).errors.full_messages
 end	

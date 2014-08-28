@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
   def index
-    @artworks = Artwork.newest.limit(6)
+    @artworks = Artwork.newest.limit(5)
   end
 
   def show
