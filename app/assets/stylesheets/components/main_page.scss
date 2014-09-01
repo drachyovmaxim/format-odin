@@ -1,0 +1,63 @@
+.main-page {
+  background: $color-white;
+  width: 100%;
+  .kalei {
+    transform: scale(0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  .logo {
+    width: 300px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    img { width: 100%; }
+  }
+}
+
+// .main-page {
+
+//   .parallax-center {
+//     width: 100%;
+//     height: 100%;
+//     overflow: hidden;
+//     position: relative;
+//   }
+
+//   .title{
+//     z-index: 9999999;
+//     position: absolute;
+//     left: 50%; top: 50%;
+//     transform: translate3d(-50%, -50%, 0);
+//     -moz-transform: translate3d(-50%, -50%, 0);
+//     -ms-transform: translate3d(-50%, -50%, 0);
+//     -webkit-transform: translate3d(-50%, -50%, 0);
+//     -o-transform: translate3d(-50%, -50%, 0);
+//   }
+
+//   .back , .middle, .body, .top {
+//     position: absolute;
+//   }
+
+//   .back {
+//     position: absolute;
+//     img {
+//       width: 600px;
+//     }
+//   }
+
+//   .top {
+//     position: absolute;
+//     img {
+//       width: 600px;
+//     }
+//   }
+
+//   .body {
+//     position: absolute;
+//     img {
+//       width: 600px;
+//     }
+//   }
+// }

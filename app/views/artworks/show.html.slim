@@ -10,9 +10,9 @@
 		h1.collection-name-top
 			= @artwork.collection.title
 	= render partial: 'artworks/large', locals: { artwork: @artwork }
-	.artist-works
-		h2 Другие принты этого художника
-		= render @artist_works
-	.other-works
-		h2 Принты других художников
-		= render @other_works
+	/ .artist-works
+	/ 	h2 Другие принты этого художника
+	/ 	= render @artist_works
+	/ .other-works
+	/ 	h2 Принты других художников
+	/ 	= render @other_works

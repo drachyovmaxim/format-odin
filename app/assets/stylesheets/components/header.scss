@@ -1,7 +1,9 @@
+.header.home { display: none; }
 .header {
   .logo {
     margin-left: $padding*3;
     margin-top: $padding;
+    a { display: inline-block; }
     img {
       height: 25px;
       display: block;

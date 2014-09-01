@@ -28,6 +28,8 @@ gem 'settingslogic'
 
 gem 'unicorn'
 
+gem 'autoprefixer-rails'
+
 group :development do
 	gem 'capistrano'
 	gem 'debugger'
