@@ -12,6 +12,6 @@ module ApplicationHelper
   end
 
 	def title
-		(content_for?(:title) ? content_for(:title) + ' - ' : '') + "Whitewalls"
+		(content_for?(:title) ? content_for(:title) + ' - ' : '') + "Формат один"
 	end
 end
