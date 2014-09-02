@@ -2,7 +2,7 @@
 .header {
   .logo {
     margin-left: $padding*3;
-    margin-top: $padding;
+    margin-top: 33px;
     a { display: inline-block; }
     img {
       height: 25px;
@@ -17,7 +17,13 @@
   li {
     display: inline-block;
     font-size: .85em;
-    margin-left: 20px;
+    margin-left: 25px;
+    color: $color-link;
+    cursor: pointer;
     &:first-child { margin-left: 0; }
+  }
+  li a.active {
+    cursor: normal;
+    color: $color-black 
   }
 }

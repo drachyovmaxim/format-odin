@@ -3,6 +3,9 @@ class ArtworksController < ApplicationController
     @artworks = Artwork.newest.limit(5)
   end
 
+  def exibition
+  end
+
   def show
     # TODO: refactor this with scopes or any
     @artwork      = Artwork.find params[:id]

@@ -10,6 +10,7 @@ Whitewalls::Application.routes.draw do
   resources :artworks, only: [:index, :show]
   resources :collections, only: :show
   resources :orders, only: :create
+  get 'exibition', to: 'artworks#exibition', as: :exibition
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

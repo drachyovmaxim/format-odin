@@ -1,6 +1,8 @@
+.about-popup {
+  display: none;
+}
 .popup {
   z-index: 999;
-  display: block;
   @include transition(all .5s ease-in-out);
   .overlay {
     position: fixed;

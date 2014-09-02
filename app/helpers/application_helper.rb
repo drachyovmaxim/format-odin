@@ -7,6 +7,10 @@ module ApplicationHelper
 		params[:page] || 1
 	end
 
+  def kaleidoscope_img
+    asset_path ["bb.jpg", "aa.jpg", "kale.png"].sample
+  end
+
 	def title
 		(content_for?(:title) ? content_for(:title) + ' - ' : '') + "Whitewalls"
 	end

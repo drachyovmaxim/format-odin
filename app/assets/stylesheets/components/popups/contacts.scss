@@ -1,0 +1,22 @@
+.contacts-popup {
+  display: none;
+  .content {
+    z-index: 9999;
+    position: absolute;
+    top: 41%; right: 0; left: 0;
+    margin: 0 auto;
+    max-width: 650px;
+    text-align: center;
+  }
+  .message {
+    @include nowie_light;
+    font-size: .85em;
+    color: $color-gray;
+    margin-bottom: $padding/3;
+  }
+  h2 {
+    @include nowie_regular;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+}
