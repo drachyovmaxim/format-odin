@@ -1,1 +1,5 @@
-h1 pofjaepfj
+.main-menu
+  .all-prints.menu-item = link_to 'Все принты', artworks_path, class: ('active' if current_page?(artworks_path))
+  .exibition.menu-item = link_to 'Выставка'
+  .about.menu-item#about-popup О проекте
+  .contacts.menu-item Контакты

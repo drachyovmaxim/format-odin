@@ -7,30 +7,11 @@
 
 
 .main-page
-  .kalei kaleimg=asset_path("kale.png")
-  / = render 'home/main_menu'
-  .logo
-    = image_tag "logo-main.svg"
-
-  / .main-menu
-  /   .all-prints Принты
-  /   .exibition Выставка
-  /   .about О проекте
-  /   .contacts Контакты
-
-  / .parallax-center
-  /   .back
-  /     = image_tag "back.png"
-  /   .body
-  /     = image_tag "middle.png"
-  /   .top
-  /     = image_tag "top.png"
-  /   .title
-  /     = image_tag "logo.svg"
-
-
-  / .center
-  /   .bg
-  /     = image_tag "gif.gif"
-  /   .logo
-  /     = image_tag "logo-main.svg"
+  .wrapper
+    .kalei kaleimg=asset_path("bb.jpg")
+  .center
+    .logo
+      = image_tag "logo-main.svg"
+      h4
+        | Граффити и принты покупай ты
+  = render 'home/main_menu'

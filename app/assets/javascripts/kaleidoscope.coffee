@@ -65,7 +65,8 @@ $ ->
 
     kaleidoscope = new Kaleidoscope
       image: image
-      slices: 10
+      slices: 24
+      radius: $(@).height() * 1.1
 
     kaleidoscope.domElement.style.position = 'absolute'
     kaleidoscope.domElement.style.marginLeft = -kaleidoscope.radius + 'px'
@@ -119,27 +120,3 @@ $ ->
         do kaleidoscope.draw
       
       setTimeout update, 1000/60
-        
-    # Init gui
-
-    # gui = new dat.GUI
-    # gui.add( kaleidoscope, 'zoom' ).min( 0.25 ).max( 2.0 )
-    # gui.add( kaleidoscope, 'slices' ).min( 6 ).max( 32 ).step( 2 )
-    # gui.add( kaleidoscope, 'radius' ).min( 200 ).max( 500 )
-    # gui.add( kaleidoscope, 'offsetX' ).min( -kaleidoscope.radius ).max( kaleidoscope.radius ).listen()
-    # gui.add( kaleidoscope, 'offsetY' ).min( -kaleidoscope.radius ).max( kaleidoscope.radius ).listen()
-    # gui.add( kaleidoscope, 'offsetRotation' ).min( -Math.PI ).max( Math.PI ).listen()
-    # gui.add( kaleidoscope, 'offsetScale' ).min( 0.5 ).max( 4.0 )
-    # gui.add( options, 'interactive' ).listen()
-    # gui.close()
-
-    # onChange = =>
-
-    #   kaleidoscope.domElement.style.marginLeft = -kaleidoscope.radius + 'px'
-    #   kaleidoscope.domElement.style.marginTop = -kaleidoscope.radius + 'px'
-        
-    #   options.interactive = no
-        
-    #   do kaleidoscope.draw
-
-    # ( c.onChange onChange unless c.property is 'interactive' ) for c in gui.__controllers
