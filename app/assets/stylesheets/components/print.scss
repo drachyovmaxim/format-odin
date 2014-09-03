@@ -1,0 +1,118 @@
+@keyframes loading {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.print-wrapper {
+  position: absolute;
+  top: 0; right: 0; left: 0;
+  background: $color-body;
+  .back {
+    z-index: 9999;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: -22px;
+    margin-bottom: $padding;
+    .message, img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    img {
+      width: $padding/2;
+      margin-right: 7px;
+      @include transition(all .2s ease-in-out);
+      &:hover { opacity: .6; }
+    }
+    .message {
+      color: $color-link;
+      font-size: .85em;
+      @include nowie_light;
+    }
+  }
+  .print-share {
+    margin-bottom: 20px;
+    .share-message, ul {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 3px;
+    }
+    li {
+      display: inline-block;
+      margin-right: 5px;
+    }
+    a {
+      padding: 8px;
+      border: 1px solid $color-link;
+      border-radius: 100%;
+      font-size: 0.85em;
+      opacity: .7;
+      &:hover {
+        background: $color-link;
+        opacity: 1;
+        color: $color-white;
+      }
+    }
+  }
+  .print-content {
+    background: #fff;
+    .print-img, .print-info {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .print-img {
+      width: 63%;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .print-info {
+      width: 37%;
+      padding: $padding $padding*2 $padding*2;
+      position: fixed;
+      max-height: 100%;
+      overflow: scroll;
+      animation: loading 2s;
+    }
+    .print-buy {
+      border-bottom: 1px solid $color-body;
+      border-top: 1px solid $color-body;
+      padding: 20px 0;
+      position: relative;
+    }
+    .button {
+      position: absolute;
+      top: 13px; right: 0;
+      font-size: .75em;
+    }
+    .price {
+      line-height: 1;
+      margin-top: 3px;
+      font-size: 1.3em;
+    }
+    h2 {
+      margin-bottom: 10px;
+      font-size: 2.2em;
+    }
+    .description {
+      font-size: .85em;
+      color: $color-gray-dark;
+      line-height: 1.7;
+      margin-bottom: $padding/2;
+      @include nowie_light;
+    }
+    .artist {
+      .avatar {
+        width: 30px;
+        img {
+          width: 100%;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}

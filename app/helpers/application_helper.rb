@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def in_rubbles(price)
-		number_to_currency(price, unit: "руб.", format: "%n %u", precision: 0, delimiter: ' ')
+		number_to_currency(price, unit: "р.", format: "%n %u", precision: 0, delimiter: ' ')
 	end
 
 	def current_page
@@ -8,7 +8,7 @@ module ApplicationHelper
 	end
 
   def kaleidoscope_img
-    asset_path ["bb.jpg", "aa.jpg", "kale.png"].sample
+    asset_path ["bb.jpg", "aa.jpg", "kale.png", "maxim.jpg", "elchin.jpg"].sample
   end
 
 	def title

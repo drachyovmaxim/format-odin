@@ -65,7 +65,7 @@ $ ->
 
     kaleidoscope = new Kaleidoscope
       image: image
-      slices: 24
+      slices: 26
       radius: $(@).height() * 1.1
 
     kaleidoscope.domElement.style.position = 'absolute'

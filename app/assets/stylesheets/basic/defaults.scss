@@ -12,7 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
-  min-width: 900px;
 }
 
 *{
@@ -85,4 +84,22 @@ h3 {
 h4 {
   font-size: 1.2em;
   @include nowie_regular;
+}
+
+.button {
+  font-size: .85em;
+  border: 1px solid $color-link;
+  @include nowie_regular;
+  color: $color-link;
+  cursor: pointer;
+  padding: $padding/3 $padding/2;
+  border-radius: 100px;
+  opacity: .8;
+  @include transition(all .2s ease-in-out);
+  background: transparent;
+  &:hover {
+    background: $color-link;
+    color: $color-white;
+    opacity: 1;
+  }
 }

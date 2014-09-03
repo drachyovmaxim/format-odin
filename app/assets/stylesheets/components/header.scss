@@ -1,8 +1,8 @@
 .header.home { display: none; }
 .header {
+  background: #fff;
+  padding: 20px 20px 10px;
   .logo {
-    margin-left: $padding*3;
-    margin-top: 33px;
     a { display: inline-block; }
     img {
       height: 25px;
@@ -11,13 +11,12 @@
   }
   .menu {
     position: absolute;
-    right: $padding*3;
-    top: 34px;
+    top: 16px; right: 19px;
   }
   li {
     display: inline-block;
     font-size: .85em;
-    margin-left: 25px;
+    margin-left: 20px;
     color: $color-link;
     cursor: pointer;
     &:first-child { margin-left: 0; }
@@ -25,5 +24,17 @@
   li a.active {
     cursor: normal;
     color: $color-black 
+  }
+  .icon a {
+    padding: 8px;
+    border: 1px solid $color-link;
+    border-radius: 100%;
+    font-size: 0.85em;
+    opacity: .7;
+    &:hover {
+      background: $color-link;
+      opacity: 1;
+      color: $color-white;
+    }
   }
 }

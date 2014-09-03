@@ -18,12 +18,12 @@ def image
   File.open Dir["#{fixtures_path}*.jpg"].sample, 'r'
 end
 
-75.times do
+5.times do
 	puts Artwork.create(
 		title: titles.sample,
 		description: 'Кажущееся постоянство в любой момент сменяет непредсказуемость. Если сейчас всё хорошо, значит пришло время.',
 		year: rand(1950..2013),
-		price: rand(1..20000),
+		price: rand(10000..20000),
 		artist: Artist.last,
 		image: image
 	).errors.full_messages
