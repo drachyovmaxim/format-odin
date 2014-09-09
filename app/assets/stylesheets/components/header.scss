@@ -1,7 +1,19 @@
+@keyframes header-loading {
+  0% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  70% { opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
 .header.home { display: none; }
 .header {
-  background: #fff;
-  padding: 20px 20px 10px;
+  padding: 25px 40px 10px;
+  animation: header-loading .5s;
   .logo {
     a { display: inline-block; }
     img {
@@ -11,7 +23,7 @@
   }
   .menu {
     position: absolute;
-    top: 16px; right: 19px;
+    top: 20px; right: 40px;
   }
   li {
     display: inline-block;

@@ -1,13 +1,22 @@
+@keyframes prints-loading {
+  0% {
+    transform: translate3d(50%, -50%, 0);
+    opacity: 0;
+  }
+  30% { opacity: 0; }
+  100% {
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1;
+  }
+}
+
 .prints {
   width: 100%;
   overflow: hidden;
   position: absolute;
   left: 50%; top: 53%;
   transform: translate3d(-50%, -50%, 0);
-  -moz-transform: translate3d(-50%, -50%, 0);
-  -ms-transform: translate3d(-50%, -50%, 0);
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  -o-transform: translate3d(-50%, -50%, 0);
+  animation: prints-loading 1.5s;
 }
 
 .prints ul {
@@ -19,7 +28,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 650px;
-  margin: 0 100px 0 $padding*3;
+  margin: 0 $padding*3 0 40px;
   white-space: nowrap;
 }
 
@@ -44,10 +53,10 @@
   }
   .print-img {
     width: 55%;
-    margin-right: 7%;
+    margin-right: 6%;
   }
   .print-info {
-    width: 38%;
+    width: 39%;
     white-space: normal;
   }
   .artist-info {

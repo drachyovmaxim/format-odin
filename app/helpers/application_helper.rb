@@ -8,7 +8,7 @@ module ApplicationHelper
 	end
 
   def kaleidoscope_img
-    asset_path ["bb.jpg", "aa.jpg", "kale.png", "maxim.jpg", "elchin.jpg"].sample
+    asset_path ["kalei/head.jpg", "kalei/heart.jpg", "kalei/chel.jpg", "kalei/chuvak.jpg"].sample
   end
 
 	def title
