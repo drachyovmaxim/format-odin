@@ -1,6 +1,6 @@
 # config/unicorn.rb
 # Set environment to production unless something else is specified
-user 'admin', 'root'
+user 'dev', 'dev'
 
 env = ENV["RAILS_ENV"] || "production"
 
@@ -12,7 +12,7 @@ preload_app true
 
 timeout 120
 
-app_dir = ENV['RAILS_ROOT']
+app_dir = '/home/dev/app/format-odin'
 
 working_directory app_dir
 
@@ -23,8 +23,6 @@ stdout_path   "#{app_dir}/log/unicorn.stdout.log"
 stderr_path   "#{app_dir}/log/unicorn.stderr.log"
 
 before_fork do |server, worker|
-  # the following is highly recomended for Rails + "preload_app true"
-  # as there's no need for the master process to hold a connection
   if defined?(ActiveRecord::Base)
     ActiveRecord::Base.connection.disconnect!
   end
@@ -42,14 +40,7 @@ before_fork do |server, worker|
 end
 
 after_fork do |server, worker|
-  # the following is *required* for Rails + "preload_app true",
   if defined?(ActiveRecord::Base)
     ActiveRecord::Base.establish_connection
   end
-
-  # if preload_app is true, then you may also want to check and
-  # restart any other shared sockets/descriptors such as Memcached,
-  # and Redis.  TokyoCabinet file handles are safe to reuse
-  # between any number of forked children (assuming your kernel
-  # correctly implements pread()/pwrite() system calls)
 end
