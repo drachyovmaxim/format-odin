@@ -27,12 +27,11 @@ gem 'kaminari'
 
 gem 'settingslogic'
 
-gem 'unicorn'
+gem 'puma'
 
 gem 'autoprefixer-rails'
 
 group :development do
-	gem 'capistrano'
 	gem 'rspec-rails', '~> 3.0.0.beta'
 	gem 'letter_opener_web', '~> 1.2.0'
 end
