@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
   def index
-    @artworks = Artwork.newest
+    @artworks = Artwork.all
   end
 
   def exibition
