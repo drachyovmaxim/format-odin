@@ -2,11 +2,11 @@
   ul
     li.icon
       / TODO: move it to helper
-      a.fb target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php"
-        | f 
+      a.fb rel="nofollow" onClick="window.open('http://www.facebook.com/sharer.php?u=#{ url }','ПОделись','toolbar=0,status=0,top=100,left=200,width=580,height=325');" href="#"
+        | f
     li.icon
-      a.vk target="_blank" href="http://www.vk.com/share.php"
+      a.vk rel="nofollow" onClick="window.open('http://www.vk.com/share.php?url=#{ url }','ПОделись','toolbar=0,status=0,top=224,left=392,width=655,height=325');" href="#"
         | v
     li.icon
-      a.tw target="_blank" href="http://www.vk.com/share.php"
+      a.tw rel="nofollow" onClick="window.open('http://www.twitter.com/share?url=#{ url }','ПОделись','toolbar=0,status=0,top=100,left=200,width=580,height=325');" href="#"
         | t

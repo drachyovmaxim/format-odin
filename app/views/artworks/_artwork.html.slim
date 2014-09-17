@@ -1,15 +1,17 @@
 li.print
   .print-img
-    = link_to image_tag(artwork.image.medium.url), artwork
+    = link_to image_tag(artwork.images.first.image.medium.url), artwork
   .print-info
     h2
       = link_to artwork.title, artwork, class: "title"
+    p.about
+      = artwork.about
     p.description
       = artwork.description
     .artist-info
       .artist-title
         | Артист:
-      .artist 
+      .artist
         = link_to artwork.artist.name, artwork
     .price
       = in_rubbles(artwork.price)

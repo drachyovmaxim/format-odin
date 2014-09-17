@@ -1,15 +1,37 @@
 ActiveAdmin.register Artwork do
-  permit_params :title, :description, :year, :price, :artist_id, :image, :collection_id
+  ATTRS = %i(
+    title
+    about
+    description
+    year
+    price
+    artist
+    collection
+  )
+
+  permit_params :title, :about, :description, :year, :price, :artist_id, :collection_id,
+    images_attributes: [:id, :image, :image_cache, :_destroy]
+
+  show do
+    attributes_table_for artwork do
+      ATTRS.each { |a| row a }
+      row 'images' do
+        artwork.images.each do |i|
+          span { image_tag i.image.url(:preview) }
+        end
+      end
+    end
+  end
 
   form multipart: true do |f|
     f.inputs "General" do
-      f.input :title
-      f.input :description
-      f.input :year
-      f.input :price
-      f.input :artist
-      f.input :collection
-      f.input :image, as: :file, hint: f.template.image_tag(f.object.image.url) 
+      f.semantic_errors
+      ATTRS.each { |a| f.input a }
+      f.has_many :images, allow_destroy: true do |ff|
+        ff.input :image_cache, :as => :hidden
+        ff.input :image, as: :file, hint: ff.template.image_tag(ff.object.image_url(:preview))
+      end
+      f.semantic_errors :images
     end
     f.actions
   end
