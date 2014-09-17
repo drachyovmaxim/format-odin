@@ -1,5 +1,5 @@
 ActiveAdmin.register Artwork do
-  ATTRS = %i(
+  attrs = %i(
     title
     about
     description
@@ -14,7 +14,7 @@ ActiveAdmin.register Artwork do
 
   show do
     attributes_table_for artwork do
-      ATTRS.each { |a| row a }
+      attrs.each { |a| row a }
       row 'images' do
         artwork.images.each do |i|
           span { image_tag i.image.url(:preview) }
@@ -26,7 +26,7 @@ ActiveAdmin.register Artwork do
   form multipart: true do |f|
     f.inputs "General" do
       f.semantic_errors
-      ATTRS.each { |a| f.input a }
+      attrs.each { |a| f.input a }
       f.has_many :images, allow_destroy: true do |ff|
         ff.input :image_cache, :as => :hidden
         ff.input :image, as: :file, hint: ff.template.image_tag(ff.object.image_url(:preview))
