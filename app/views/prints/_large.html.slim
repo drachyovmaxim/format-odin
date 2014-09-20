@@ -13,7 +13,7 @@
         | Все принты
   h2
     = print.title
-  p.description = print.description.html_safe
+  p.description = print.description
   = render partial: 'prints/print_share', locals: { url: print_url(print) }
   .print-buy
     #buy-print.button data-popup-id='buy-popup-#{ print.id }' = "Купить принт"

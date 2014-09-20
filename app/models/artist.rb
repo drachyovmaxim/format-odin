@@ -4,4 +4,8 @@ class Artist < ActiveRecord::Base
   accepts_nested_attributes_for :images, allow_destroy: true
 
 	validates_presence_of :name
+
+  def to_param
+    "#{id}-#{name.to_ascii.parameterize}"
+  end
 end

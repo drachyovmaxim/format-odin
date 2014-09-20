@@ -1,13 +1,13 @@
 .artist-name
-	= @artist.name.html_safe
+	= @artist.name
 h3
   | Немного о себе
 .artist-about
-  = @artist.about.html_safe
+  = @artist.about
 h3
   | Что вдохновляет тебя
 .artist-bio
-	= @artist.bio.html_safe
+	= @artist.bio
 .artist-images
   - @artist.images.each do |i|
     = image_tag(i.image_url(:large))

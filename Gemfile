@@ -21,7 +21,7 @@ gem 'mini_magick'
 gem 'kaminari'
 gem 'settingslogic'
 
-
+gem 'unidecoder'
 
 group :development do
 	gem 'rspec-rails', '~> 3.0.0.beta'

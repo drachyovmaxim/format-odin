@@ -5,4 +5,8 @@ class Collection < ActiveRecord::Base
 	validates_presence_of :title, :description
 
 	has_many :prints
+
+  def to_param
+    "#{id}-#{title.to_ascii.parameterize}"
+  end
 end

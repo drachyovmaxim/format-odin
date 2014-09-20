@@ -12,6 +12,9 @@ class Print < ActiveRecord::Base
 
   scope :newest, order: 'created_at DESC'
 
+  def to_param
+    "#{id}-#{title.to_ascii.parameterize}"
+  end
 
   private
   def validate_images_present
