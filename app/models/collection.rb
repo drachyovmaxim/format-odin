@@ -4,5 +4,5 @@ class Collection < ActiveRecord::Base
 
 	validates_presence_of :title, :description
 
-	has_many :artworks
+	has_many :prints
 end

@@ -1,4 +1,4 @@
-ActiveAdmin.register Artwork do
+ActiveAdmin.register Print do
   attrs = %i(
     title
     about
@@ -12,11 +12,11 @@ ActiveAdmin.register Artwork do
   permit_params :title, :about, :description, :year, :price, :artist_id, :collection_id,
     images_attributes: [:id, :image, :image_cache, :_destroy]
 
-  show do
-    attributes_table_for artwork do
+  show do |print|
+    attributes_table_for print do
       attrs.each { |a| row a }
       row 'images' do
-        artwork.images.each do |i|
+        print.images.each do |i|
           span { image_tag i.image.url(:preview) }
         end
       end

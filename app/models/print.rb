@@ -1,4 +1,4 @@
-class Artwork < ActiveRecord::Base
+class Print < ActiveRecord::Base
 	belongs_to :artist
   belongs_to :collection
 

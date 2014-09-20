@@ -11,6 +11,6 @@ h3
 .artist-images
   - @artist.images.each do |i|
     = image_tag(i.image_url(:large))
-.artworks
+.prints
 	h2 Все принты этого автора
-	= render @artist.artworks
+	= render @artist.prints

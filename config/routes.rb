@@ -1,4 +1,4 @@
-Whitewalls::Application.routes.draw do
+FormatOdin::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
@@ -7,10 +7,10 @@ Whitewalls::Application.routes.draw do
   root 'home#index'
 
   resources :artists, only: :show
-  resources :artworks, only: [:index, :show]
+  resources :prints, only: [:index, :show]
   resources :collections, only: :show
   resources :orders, only: :create
-  get 'exibition', to: 'artworks#exibition', as: :exibition
+  get 'exibition', to: 'prints#exibition', as: :exibition
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

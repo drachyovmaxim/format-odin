@@ -1,0 +1,19 @@
+li.print
+  .print-img
+    = link_to image_tag(print.images.first.image.medium.url), print
+  .print-info
+    h2
+      = link_to print.title, print, class: "title"
+    p.about
+      = print.about
+    p.description
+      = print.description
+    .artist-info
+      .artist-title
+        | Артист:
+      .artist
+        = link_to print.artist.name, print
+    .price
+      = in_rubbles(print.price)
+    .history = link_to "Прочитать историю", print
+    a#buy-print.buy data-popup-id='buy-popup-#{ print.id }' = "Купить принт"

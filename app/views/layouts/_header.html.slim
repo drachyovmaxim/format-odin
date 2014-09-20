@@ -1,11 +1,11 @@
 .header class="#{params[:controller]}"
   .logo = link_to image_tag("logo.svg"), root_path
   ul.menu
-    li = link_to 'Принты', artworks_path, class: ('active' if current_page?(artworks_path))
+    li = link_to 'Принты', prints_path, class: ('active' if current_page?(prints_path))
     li = link_to 'Выставка', exibition_path, class: ('active' if current_page?(exibition_path))
     li#about-popup О проекте
     li#contacts-popup Контакты
     li.icon
       / TODO: move it to helper
       a.fb target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php"
-        | f 
+        | f

@@ -1,0 +1,13 @@
+/ - content_for :title do
+/ 	= "#{@print.artist.name} - #{@print.title}"
+/ - content_for	:facebook_image
+/ 	= @print.image.medium.url
+/ - if @print.description
+/ 	- content_for :facebook_description
+/ 		= strip_tags @print.description
+
+.print-wrapper
+  .print-content
+  	= render partial: 'prints/large', locals: { print: @print }
+  / ul
+  /   = render @prints

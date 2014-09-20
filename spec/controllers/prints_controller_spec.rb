@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ArtworksController do
+describe PrintssController do
 
   describe "GET 'show'" do
     it "returns http success" do

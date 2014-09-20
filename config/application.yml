@@ -9,4 +9,4 @@ test:
 
 production:
   <<: *defaults
-  admin_email: hello@whitewallsproblems.com
+  admin_email: 'achernik@gmail.com'

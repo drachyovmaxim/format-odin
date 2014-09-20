@@ -19,7 +19,7 @@ def image
 end
 
 5.times do
-	puts Artwork.create(
+	puts Print.create(
 		title: titles.sample,
 		description: 'Кажущееся постоянство в любой момент сменяет непредсказуемость. Если сейчас всё хорошо, значит пришло время.',
 		year: rand(1950..2013),

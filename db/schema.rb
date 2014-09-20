@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917201101) do
+ActiveRecord::Schema.define(version: 20140920112530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,20 +57,6 @@ ActiveRecord::Schema.define(version: 20140917201101) do
     t.string   "about"
   end
 
-  create_table "artworks", force: true do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "year"
-    t.integer  "price"
-    t.integer  "artist_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "collection_id"
-    t.string   "about"
-  end
-
-  add_index "artworks", ["collection_id"], name: "index_artworks_on_collection_id", using: :btree
-
   create_table "collections", force: true do |t|
     t.string   "title"
     t.text     "description"
@@ -89,5 +75,19 @@ ActiveRecord::Schema.define(version: 20140917201101) do
   end
 
   add_index "images", ["model_with_image_id", "model_with_image_type"], name: "images_finder_index", using: :btree
+
+  create_table "prints", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "year"
+    t.integer  "price"
+    t.integer  "artist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "collection_id"
+    t.string   "about"
+  end
+
+  add_index "prints", ["collection_id"], name: "index_prints_on_collection_id", using: :btree
 
 end
