@@ -66,7 +66,7 @@ $ ->
     kaleidoscope = new Kaleidoscope
       image: image
       slices: 22
-      radius: $(@).height() * 1.1
+      radius: $(@).height() / 1.3
 
     kaleidoscope.domElement.style.position = 'absolute'
     kaleidoscope.domElement.style.marginLeft = -kaleidoscope.radius + 'px'

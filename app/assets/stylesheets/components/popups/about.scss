@@ -1,9 +1,12 @@
 @keyframes revealing {
-  from {
-    transform: translate3d(0, -100%, 0);
+  0% {
+    transform: scale(.5) translate3d(0, -100%, 0);
+    opacity: 0;
   }
-  to {
-    transform: translate3d(0, 0, 0);
+  60% { opacity: 0; }
+  100% {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
   }
 }
 
@@ -17,7 +20,7 @@
 }
 .popup {
   z-index: 999;
-  animation: revealing .3s;
+  animation: revealing .4s;
   @include transition(all .5s ease-in-out);
   .overlay {
     position: fixed;

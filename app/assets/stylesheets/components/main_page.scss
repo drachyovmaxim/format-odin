@@ -42,13 +42,12 @@
     top: 0; right: 0; left: 0; bottom: 0;
   }
   .kalei {
-    transform: scale(0.5);
     position: absolute;
     top: -50%; right: -50%; left: -50%; bottom: -50%;
     overflow: hidden;
   }
   .logo {
-    width: 300px;
+    width: 250px;
     img { width: 100%; }
   }
   .center {
@@ -60,10 +59,6 @@
       text-align: center;
       font-size: 1.1em;
       @include nowie_light;
-    }
-    .small {
-      font-size: .85em;
-      margin-top: 10px;
     }
   }
   .menu-item {

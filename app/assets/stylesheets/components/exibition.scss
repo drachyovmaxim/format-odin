@@ -1,0 +1,31 @@
+$width-exibition-body: 850px;
+$width-exibition-text: 700px;
+
+.exibition-header {
+  margin-top: -66px;
+  position: relative;
+  background: image_url("exibition/big.jpeg") no-repeat center center;
+  // background-attachment: fixed;
+  background-size: cover;
+}
+
+.exibition-body {
+  position: relative;
+  z-index: 2;
+  background: $color-body;
+  margin: 0 auto;
+  max-width: $width-exibition-body;
+
+  h4, p {
+    width: $width-exibition-text;
+    margin: 40px auto;
+    color: $color-black;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+
+.exibition-body img {
+  width: 100%;
+}

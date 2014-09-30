@@ -1,4 +1,4 @@
-.header class="#{params[:controller]}"
+.header
   .logo = link_to image_tag("logo.svg"), root_path
   ul.menu
     li = link_to 'Принты', prints_path, class: ('active' if current_page?(prints_path))
