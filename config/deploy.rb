@@ -24,6 +24,7 @@ set :keep_releases,       9999
 set :default_server,      :production
 set :server, ENV['to'] || default_server
 set :user,                'dev'
+set :forward_agent,       true
 set :deploy_to,           "/home/#{user}/apps/#{app}"
 set :repository,          "git@github.com:drachyovmaxim/format-odin.git"
 set :nginx_path,          '/etc/nginx'

@@ -1,5 +1,4 @@
 require 'sidekiq'
-require 'sidekiq-status'
 
 redis_conn = proc {
   $redis
