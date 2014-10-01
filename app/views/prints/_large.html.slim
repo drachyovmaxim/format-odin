@@ -19,9 +19,10 @@
     #buy-print.button data-popup-id='buy-popup-#{ print.id }' = "Купить принт"
     .price = in_rubbles(print.price)
   .artist
-    .avatar
-      = image_tag "maxim.jpg"
-    = link_to print.artist.name, print.artist, class: "author"
+    = print.artist.name
+    p.artist-small-bio
+      | В 1901 году он окончил Технический университет Брно по специальности «инженер», позже перебрался в Берлин, где начал изучать психологию и философию
+    = link_to t("Посмотреть профайл"), print.artist, class: "author"
 
 
 / .share

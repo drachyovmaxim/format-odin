@@ -1,9 +1,32 @@
+$width-print-info: 460px;
+
 @keyframes loading {
-  from {
+  0% {
     opacity: 0;
+    transform: translate3d(100%, 0, 0);
   }
-  to {
+  60% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes image-loading {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  60% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -59,24 +82,25 @@
   }
   .print-content {
     background: #fff;
-    .print-img, .print-info {
-      display: inline-block;
-      vertical-align: top;
-    }
     .print-img {
-      width: 63%;
+      width: 100%;
+      padding-right: $width-print-info;
+      animation: image-loading 1s;
       img {
         width: 100%;
         display: block;
       }
     }
     .print-info {
-      width: 37%;
-      padding: $padding $padding*2 $padding*2;
+      padding: $padding $padding*2;
       position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
       max-height: 100%;
       overflow: scroll;
       animation: loading 1s;
+      width: $width-print-info;
     }
     .print-buy {
       border-bottom: 1px solid $color-body;
@@ -86,13 +110,13 @@
     }
     .button {
       position: absolute;
-      top: 13px; right: 0;
+      top: 12px; right: 0;
       font-size: .75em;
     }
     .price {
       line-height: 1;
-      margin-top: 3px;
-      font-size: 1.3em;
+      margin-top: 5px;
+      font-size: 1em;
     }
     h2 {
       margin-bottom: 10px;
@@ -101,18 +125,23 @@
     .description {
       font-size: .85em;
       color: $color-gray-dark;
-      line-height: 1.7;
+      line-height: 1.5;
       margin-bottom: $padding/2;
       @include nowie_light;
     }
-    .artist {
-      .avatar {
-        width: 30px;
-        img {
-          width: 100%;
-          border-radius: 100px;
-        }
-      }
+  }
+  .print-info .artist {
+    margin-top: 20px;
+    p {
+      font-size: .85em;
+      color: $color-gray-dark;
+      line-height: 1.5;
+      margin-top: 5px;
+    }
+    a {
+      @include nowie_light;
+      font-size: .85em;
+      margin-top: 5px;
     }
   }
 }
