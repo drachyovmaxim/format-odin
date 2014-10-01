@@ -3,7 +3,7 @@
     transform: translate3d(0, -100%, 0);
     opacity: 0;
   }
-  70% { opacity: 0; }
+  40% { opacity: 0; }
   100% {
     transform: translate3d(0, 0, 0);
     opacity: 1;
@@ -13,7 +13,7 @@
 .header.home { display: none; }
 .header {
   padding: 25px 40px 10px;
-  // animation: header-loading 2s;
+  animation: header-loading 1s;
   .logo {
     a { display: inline-block; }
     img {

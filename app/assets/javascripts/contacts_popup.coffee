@@ -4,13 +4,13 @@ $ ->
   $document = $(document)
 
   $document.on 'click', ".popup-close", ->
-    $p().css "display", "none"
+    $p().removeClass "popup-reveal"
     return
 
   $document.on 'click', ".overlay", (e) ->
-    $p().css "display", "none"  if e.target is this
+    $p().removeClass "popup-reveal"  if e.target is this
     return
 
   $document.on 'click', "#contacts-popup", ->
-    $p().css "display", "block"
+    $p().addClass "popup-reveal"
     return
