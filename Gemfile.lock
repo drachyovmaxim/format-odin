@@ -15,6 +15,15 @@ GIT
       ransack (~> 1.3)
       sass-rails
 
+GIT
+  remote: git://github.com/div/mina-stack.git
+  revision: fdade989c6f38a38fbb471ed5657bdd08ac681a5
+  specs:
+    mina-stack (0.0.1)
+      highline
+      mina
+      rake
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,6 +75,8 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -74,6 +85,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    connection_pool (1.2.0)
     debug_inspector (0.0.2)
     devise (3.3.0)
       bcrypt (~> 3.0)
@@ -89,6 +101,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
+    highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.11)
     inherited_resources (1.4.1)
@@ -114,10 +127,14 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mina (0.3.0)
+      open4
+      rake
     mini_magick (3.8.0)
       subexec (~> 0.2.1)
     minitest (5.4.1)
     multi_json (1.10.1)
+    open4 (1.3.4)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.1.0)
@@ -150,6 +167,9 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.1)
+    redis (3.0.7)
+    redis-namespace (1.4.1)
+      redis (~> 3.0.4)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (3.0.4)
@@ -175,6 +195,12 @@ GEM
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
     settingslogic (2.0.9)
+    sidekiq (2.16.1)
+      celluloid (>= 0.15.2)
+      connection_pool (>= 1.0.0)
+      json
+      redis (>= 3.0.4)
+      redis-namespace (>= 1.3.1)
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -200,6 +226,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    timers (1.1.0)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
@@ -225,6 +252,7 @@ DEPENDENCIES
   devise
   kaminari
   letter_opener_web (~> 1.2.0)
+  mina-stack!
   mini_magick
   pg
   puma
@@ -232,6 +260,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 4.0.2)
   settingslogic
+  sidekiq
   simple_form
   slim-rails
   uglifier (>= 1.3.0)
