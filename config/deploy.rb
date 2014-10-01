@@ -4,11 +4,28 @@ require 'mina/git'
 require 'mina/rbenv'
 require 'mina-stack'
 
+# set :app,                 'qlean'
+# set :server_name,         'qlean.ru'
+# set :keep_releases,       9999
+# set :default_server,      :staging
+# set :server, ENV['to'] || default_server
+# set :user,                'dev'
+# set :deploy_to,           "/home/#{user}/apps/#{app}"
+# set :repository,          "git@github.com:Qlean/#{app}.app.git"
+# set :nginx_path,          '/etc/nginx'
+# invoke :"env:#{server}"
+# set :sidekiq_pid, "#{pids_path}/sidekiq.pid"
+
+
 set :app,                 'format1'
 set :server_name,         'format1.net'
 set :keep_releases,       9999
 set :default_server,      :production
 set :server, ENV['to'] || default_server
+set :user,                'dev'
+set :deploy_to,           "/home/#{user}/apps/#{app}"
+set :repository,          "git@github.com:drachyovmaxim/format-odin.git"
+set :nginx_path,          '/etc/nginx'
 invoke :"env:#{server}"
 
 # Allow calling as `mina deploy at=master`
