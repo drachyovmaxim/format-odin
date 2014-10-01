@@ -1,0 +1,18 @@
+{
+  "name": "format1",
+  "version": "0.0.1",
+  "homepage": "https://github.com/drachyovmaxim/format-odin",
+  "authors": [
+    "Alexander Chernik <achernik@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
