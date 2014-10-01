@@ -3,6 +3,7 @@ require 'mina/rails'
 require 'mina/git'
 require 'mina/rbenv'
 require 'mina-stack'
+require 'mina_sidekiq/tasks'
 
 # set :app,                 'qlean'
 # set :server_name,         'qlean.ru'

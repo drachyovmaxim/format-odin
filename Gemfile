@@ -29,5 +29,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'mina-stack', github: 'div/mina-stack'
+  gem 'mina-sidekiq'
 	gem 'letter_opener_web', '~> 1.2.0'
 end

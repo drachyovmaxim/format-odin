@@ -130,6 +130,8 @@ GEM
     mina (0.3.0)
       open4
       rake
+    mina-sidekiq (0.3.0)
+      mina
     mini_magick (3.8.0)
       subexec (~> 0.2.1)
     minitest (5.4.1)
@@ -252,6 +254,7 @@ DEPENDENCIES
   devise
   kaminari
   letter_opener_web (~> 1.2.0)
+  mina-sidekiq
   mina-stack!
   mini_magick
   pg
