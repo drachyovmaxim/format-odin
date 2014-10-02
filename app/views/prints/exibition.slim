@@ -1,6 +1,11 @@
 .exibition-wrapper
   .exibition-header
-    h2 
+    ul.menu
+      li = link_to 'Принты', prints_path, class: ('active' if current_page?(prints_path))
+      li = link_to 'Выставка', exibition_path, class: ('active' if current_page?(exibition_path))
+      li#about-popup О проекте
+      li#contacts-popup Контакты
+    h1 
       | Формат один: перемены
   .exibition-body
     h4
@@ -12,5 +17,106 @@
     p
       | Одинаковый формат работ и единая цена, вне зависимости от известности того или иного автора, позволили посетителям по-новому взглянуть на формат групповой выставки. 
     = image_tag "exibition/third.jpeg"
-    .artist-works
-      h2 Другие принты этого художника
+
+  .carousel-wrapper
+    .jcarousel-wrapper
+      .jcarousel-control-prev = image_tag("arrow_left.svg")
+      .jcarousel-control-next = image_tag("arrow_right.svg")
+      .jcarousel
+        ul
+          li
+            = image_tag "exibition/works/1.jpg"
+          li
+            = image_tag "exibition/works/2.jpg"
+          li
+            = image_tag "exibition/works/3.jpg"
+          li
+            = image_tag "exibition/works/4.jpg"
+          li
+            = image_tag "exibition/works/5.jpg"
+          li
+            = image_tag "exibition/works/6.jpg"
+          li
+            = image_tag "exibition/works/7.jpg"
+          li
+            = image_tag "exibition/works/8.jpg"
+          li
+            = image_tag "exibition/works/9.jpg"
+          li
+            = image_tag "exibition/works/10.jpg"
+          li
+            = image_tag "exibition/works/11.jpg"
+          li
+            = image_tag "exibition/works/12.jpg"
+          li
+            = image_tag "exibition/works/13.jpg"
+          li
+            = image_tag "exibition/works/14.jpg"
+          li
+            = image_tag "exibition/works/15.jpg"
+          li
+            = image_tag "exibition/works/16.jpg"
+          li
+            = image_tag "exibition/works/17.jpg"
+          li
+            = image_tag "exibition/works/18.jpg"
+          li
+            = image_tag "exibition/works/19.jpg"
+          li
+            = image_tag "exibition/works/20.jpg"
+          li
+            = image_tag "exibition/works/21.jpg"
+          li
+            = image_tag "exibition/works/22.jpg"
+          li
+            = image_tag "exibition/works/23.jpg"
+          li
+            = image_tag "exibition/works/24.jpg"
+          li
+            = image_tag "exibition/works/25.jpg"
+          li
+            = image_tag "exibition/works/26.jpg"
+          li
+            = image_tag "exibition/works/27.jpg"
+          li
+            = image_tag "exibition/works/28.jpg"
+          li
+            = image_tag "exibition/works/29.jpg"
+          li
+            = image_tag "exibition/works/30.jpg"
+          li
+            = image_tag "exibition/works/31.jpg"
+          li
+            = image_tag "exibition/works/32.jpg"
+          li
+            = image_tag "exibition/works/33.jpg"
+          li
+            = image_tag "exibition/works/34.jpg"
+          li
+            = image_tag "exibition/works/35.jpg"
+          li
+            = image_tag "exibition/works/36.jpg"
+          li
+            = image_tag "exibition/works/37.jpg"
+          li
+            = image_tag "exibition/works/38.jpg"
+          li
+            = image_tag "exibition/works/39.jpg"
+          li
+            = image_tag "exibition/works/40.jpg"
+          li
+            = image_tag "exibition/works/41.jpg"
+          li
+            = image_tag "exibition/works/42.jpg"
+          li
+            = image_tag "exibition/works/43.jpg"
+          li
+            = image_tag "exibition/works/44.jpg"
+          li
+            = image_tag "exibition/works/45.jpg"
+          li
+            = image_tag "exibition/works/46.jpg"
+          li
+            = image_tag "exibition/works/47.jpg"
+          li
+            = image_tag "exibition/works/48.jpg"

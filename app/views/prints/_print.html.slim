@@ -10,7 +10,7 @@ li.print
       .artist-title
         | Артист:
       .artist
-        = link_to print.artist.name, print
+        = link_to print.artist.name, print.artist
     .price
       = in_rubbles(print.price)
     .history = link_to "Посмотреть принт", print

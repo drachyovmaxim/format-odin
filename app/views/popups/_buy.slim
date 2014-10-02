@@ -1,0 +1,14 @@
+.popup.buy-popup
+  .overlay
+  .popup-close = image_tag("close.svg")
+  .buy-wrapper
+    h2 Купить принт
+    .form
+      = simple_form_for Order.new, remote: true do |f|
+        = f.input :name
+        = f.input :email
+        = f.input :address
+        = f.input :phone
+        = f.input :comment, as: :text
+        = f.hidden_field :print_id, value: print ? print.id : @print.id
+        .buy-popup = f.submit
