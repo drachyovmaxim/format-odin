@@ -7,6 +7,6 @@ class Collection < ActiveRecord::Base
 	has_many :prints
 
   def to_param
-    "#{id}-#{title.to_ascii.parameterize}"
+    "#{id}-#{Russian.transliterate(title).parameterize}"
   end
 end

@@ -13,7 +13,7 @@ class Print < ActiveRecord::Base
   scope :newest, order: 'created_at DESC'
 
   def to_param
-    "#{id}-#{title.to_ascii.parameterize}"
+    "#{id}-#{Russian.transliterate(title).parameterize}"
   end
 
   private

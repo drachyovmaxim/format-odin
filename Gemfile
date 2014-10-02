@@ -14,6 +14,9 @@ gem 'sidekiq'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
+gem 'i18n'
+gem 'russian', '~> 0.6.0'
+
 gem 'simple_form'
 
 gem 'carrierwave'

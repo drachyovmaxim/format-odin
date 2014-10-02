@@ -6,6 +6,6 @@ class Artist < ActiveRecord::Base
 	validates_presence_of :name
 
   def to_param
-    "#{id}-#{name.to_ascii.parameterize}"
+    "#{id}-#{Russian.transliterate(name).parameterize}"
   end
 end
