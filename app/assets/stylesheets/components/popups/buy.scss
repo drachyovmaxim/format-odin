@@ -7,6 +7,47 @@
   bottom: 0;
   .buy-wrapper {
     position: absolute;
-    z-index: 99999;
+    left: 50%; top: 53%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 9999999;
+  }
+  .control-label {
+    display: none;
+  }
+  .input {
+    position: relative;
+    abbr {
+      display: none;
+    }
+  }
+  input {
+    outline: none;
+    -webkit-appearance: none;
+    width: 100%;
+    background: $color-body;
+    -webkit-font-smoothing: antialiased;
+    font-size: .85em;
+    @include nowie_light;
+  }
+  input, textarea {
+    width: 300px;
+    outline: none;
+    -webkit-appearance: none;
+    font-size: .85em;
+    margin: 15px 0 0;
+    border: 1px solid #ccc;
+    padding: 10px 10px 6px;
+    -webkit-font-smoothing: antialiased;
+  }
+  textarea {
+    height: 100px;
+  }
+  .button {
+    border: 1px solid $color-link;
+    font-size: .75em;
+    @include nowie_regular;
+    position: relative !important;
+    top: 0 !important;
+    padding: 10px 15px !important;
   }
 }

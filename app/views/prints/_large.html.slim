@@ -1,10 +1,6 @@
-/ = render 'layouts/buy_popup', print: print
-/ = link_to image_tag(print.image.url), print.image.url, class: [ "link", "image-link" ]
-
-
 .print-img
   - print.images.each do |img|
-    = image_tag(img.image_url(:large))
+    = image_tag(img.image_url)
 .print-info
   .back
     = link_to prints_path
@@ -13,7 +9,7 @@
         | Все принты
   h2
     = print.title
-  p.description = print.description
+  p.description = print.description.html_safe
   = render partial: 'prints/print_share', locals: { url: print_url(print) }
   .print-buy
     #buy-print.button data-popup-id='buy-popup-#{ print.id }' = "Купить принт"
@@ -25,13 +21,3 @@
     = link_to t("Посмотреть профайл"), print.artist, class: "author"
 
 = render 'popups/buy', print: print
-
-
-/ .share
-/   .share-message Поделиться с друзьями:
-/   ul
-/     li.icon
-/       / TODO: move it to helper
-/     	a.fb target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?u=#{ print_path print, only_path: false }" f
-/     li.icon
-/       a.vk target="_blank" href="http://www.vk.com/share.php?url=#{ print_path print, only_path: false }" v

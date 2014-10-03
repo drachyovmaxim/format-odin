@@ -39,7 +39,7 @@ $width-print-info: 460px;
     cursor: pointer;
     display: inline-block;
     margin-left: -22px;
-    margin-bottom: $padding;
+    margin-bottom: 20px;
     .message, img {
       display: inline-block;
       vertical-align: middle;
@@ -120,14 +120,20 @@ $width-print-info: 460px;
     }
     h2 {
       margin-bottom: 10px;
-      font-size: 2.2em;
+      font-size: 1.9em;
+      line-height: 1.2;
     }
     .description {
       font-size: .85em;
       color: $color-gray-dark;
       line-height: 1.5;
-      margin-bottom: $padding/2;
+      margin-bottom: $padding/3;
       @include nowie_light;
+      strong {
+        font-weight: normal;
+        line-height: 2.3;
+        color: $color-black;
+      }
     }
   }
   .print-info .artist {
