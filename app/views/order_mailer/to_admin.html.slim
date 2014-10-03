@@ -1,6 +1,6 @@
 h2 Ура! У Вас новый заказ!
 
-.text Кажется кто-то хочет купить работу #{ link_to @order.print.title, print_path( @order.print, only_path: false ) }.
+.text Кажется кто-то хочет купить работу #{ link_to @order.print.title, print_link(@order.print) }.
 .contacts
   .span Вот его контактные данные:
   .span Имя: #{ @order.name }

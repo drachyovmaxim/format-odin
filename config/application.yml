@@ -9,4 +9,4 @@ test:
 
 production:
   <<: *defaults
-  admin_email: 'achernik@gmail.com'
+  admin_email: 'formatodin@gmail.com'

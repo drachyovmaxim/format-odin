@@ -1,5 +1,10 @@
 FormatOdin::Application.routes.draw do
 
+  authenticate :admin_user do
+    require 'sidekiq/web'
+    mount Sidekiq::Web => '/admin/sidekiq'
+  end
+
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   ActiveAdmin.routes(self)

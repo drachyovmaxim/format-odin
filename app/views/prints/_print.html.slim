@@ -10,7 +10,7 @@ li.print
       .artist-title
         | Артист:
       .artist
-        p = @artist.bio.html_safe
+        p = print.artist.bio.html_safe
         = link_to print.artist.name, print.artist
     .price
       = in_rubbles(print.price)

@@ -1,19 +1,9 @@
-class Order
-  include ActiveModel::Model
-  extend ActiveModel::Naming
+class Order < ActiveRecord::Base
 
-  attr_accessor :print, :email, :name, :address, :comment, :phone, :ip, :created_at
-  validates_presence_of :print, :email
+  belongs_to :print
+  validates_presence_of :print_id, :email
 
   def notify_admin
-    OrderMailer.new_order(self).deliver
-  end
-
-  def print_id=(id)
-    @print = Print.find id
-  end
-
-  def persisted?
-    false
+    OrderNotificationsWorker.perform_async(self.id)
   end
 end

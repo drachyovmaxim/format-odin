@@ -6,7 +6,7 @@
       = simple_form_for Order.new, remote: true do |f|
         = f.input :name, placeholder: 'Имя'
         = f.input :email, placeholder: 'Email'
-        = f.input :address, placeholder: 'Телефон'
-        = f.input :phone, placeholder: 'Адрес'
+        = f.input :phone, placeholder: 'Телефон'
+        = f.input :address, placeholder: 'Адрес'
         = f.hidden_field :print_id, value: print ? print.id : @print.id
         = f.submit 'Отправить заказ', class: 'button'
