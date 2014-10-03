@@ -101,10 +101,11 @@ $width-print-info: 460px;
       overflow: scroll;
       animation: loading 1s;
       width: $width-print-info;
+      background: $color-body;
     }
     .print-buy {
-      border-bottom: 1px solid $color-body;
-      border-top: 1px solid $color-body;
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
       padding: 20px 0;
       position: relative;
     }
