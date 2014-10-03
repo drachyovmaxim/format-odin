@@ -1,7 +1,7 @@
 require 'sidekiq'
 
 redis_conn = proc {
-  $redis
+  Redis::Namespace('sidekiq', redis: $redis)
 }
 
 Sidekiq.configure_client do |config|

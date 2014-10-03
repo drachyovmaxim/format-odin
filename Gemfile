@@ -10,6 +10,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'slim-rails'
 gem 'autoprefixer-rails'
 
+gem 'redis'
+gem 'redis-namespace'
 gem 'sidekiq'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
