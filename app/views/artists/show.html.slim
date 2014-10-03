@@ -1,20 +1,8 @@
 .artist-info
   h1.artist-name
   	= @artist.name
-  / h3
-  /   | Немного о себе
   p.artist-about
-    = @artist.about
-  / h3
-  /   | Что вдохновляет тебя
-  p.artist-bio
-  	= @artist.bio
-  / .artist-images
-  /   - @artist.images.each do |i|
-  /     = image_tag(i.image_url(:large))
-/ .prints-artist
-/ 	h2 Все принты этого автора
-/ 	= render @artist.prints
+    = @artist.about.html_safe
 .carousel-wrapper
   .jcarousel-wrapper
     .jcarousel-control-prev = image_tag("arrow_left.svg")
