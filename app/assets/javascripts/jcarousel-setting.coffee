@@ -2,9 +2,9 @@ init = ->
   $(".jcarousel").jcarousel({
     wrap: 'circular'
   })
-  # $('.jcarousel').jcarouselAutoscroll({
-  #   interval: 5000
-  # })
+  $('.jcarousel').jcarouselAutoscroll({
+    interval: 4000
+  })
   $(".jcarousel-control-prev").on("jcarouselcontrol:active", ->
     $(this).removeClass "inactive"
     return

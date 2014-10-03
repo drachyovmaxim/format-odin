@@ -2,7 +2,12 @@
   overflow: hidden;
   width: 100%;
   position: relative;
-  background: #222;
+  background: #0c0e0d;;
+}
+
+.exibition-color {
+  background: #0c0e0d;
+  margin-top: 50px;
 }
 
 .jcarousel-wrapper {
@@ -14,7 +19,7 @@
   position: absolute;
   right: $padding;
   top: 46%;
-  z-index: 9999999999;
+  z-index: 99999;
   cursor: pointer;
   opacity: .6;
   img { width: 20px; }
@@ -26,7 +31,7 @@
   position: absolute;
   left: $padding;
   top: 46%;
-  z-index: 9999999999;
+  z-index: 99999;
   cursor: pointer;
   opacity: .6;
   img { width: 20px; }

@@ -12,7 +12,7 @@
   bottom: 0;
 }
 .popup {
-  z-index: 999;
+  z-index: 999999999;
   @include transition(all .3s ease-in-out);
   .overlay {
     position: fixed;

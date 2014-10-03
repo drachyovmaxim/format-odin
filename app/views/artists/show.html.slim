@@ -1,14 +1,15 @@
-.artist-info
-  h1.artist-name
-  	= @artist.name
-  p.artist-about
-    = @artist.about.html_safe
-.carousel-wrapper
-  .jcarousel-wrapper
-    .jcarousel-control-prev = image_tag("arrow_left.svg")
-    .jcarousel-control-next = image_tag("arrow_right.svg")
-    .jcarousel
-      ul
-        - @artist.images.each do |i|
-          li
-            = image_tag(i.image_url(:large))
+.artist-wrapper
+  .artist-info
+    h2.artist-name
+    	= @artist.name
+    p.artist-about
+      = @artist.bio.html_safe
+  .carousel-wrapper
+    .jcarousel-wrapper
+      .jcarousel-control-prev = image_tag("arrow_left.svg")
+      .jcarousel-control-next = image_tag("arrow_right.svg")
+      .jcarousel
+        ul
+          - @artist.images.each do |i|
+            li
+              = image_tag(i.image_url(:large))
