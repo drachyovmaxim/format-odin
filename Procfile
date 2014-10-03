@@ -1,0 +1,1 @@
+worker: bundle exec sidekiq -e development -C config/sidekiq.yml -q often,7 -q seldom,3 -q default,5

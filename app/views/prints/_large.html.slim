@@ -1,3 +1,6 @@
+- content_for(:title) do
+  = "#{print.title} | Автор: #{print.artist.name}"
+
 .print-img
   - print.images.each do |img|
     = image_tag(img.image_url)
@@ -9,7 +12,7 @@
         | Все принты
   h2
     = print.title
-  p.description = print.description.html_safe
+  p.description = print.description.try(:html_safe)
   = render partial: 'prints/print_share', locals: { url: print_url(print) }
   .print-buy
     #buy-print.button data-popup-id='buy-popup-#{ print.id }' = "Купить принт"
@@ -17,7 +20,7 @@
   .artist
     = print.artist.name
     p.artist-small-bio
-      | В 1901 году он окончил Технический университет Брно по специальности «инженер», позже перебрался в Берлин, где начал изучать психологию и философию
+      = print.artist.about.try(:html_safe)
     = link_to t("Посмотреть профайл"), print.artist, class: "author"
 
 = render 'popups/buy', print: print

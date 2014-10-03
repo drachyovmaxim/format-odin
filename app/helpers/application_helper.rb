@@ -12,6 +12,7 @@ module ApplicationHelper
   end
 
 	def title
-		(content_for?(:title) ? content_for(:title) + ' - ' : '') + "Формат один"
+		(content_for?(:title) ? content_for(:title) + ' - ' : '') + "Формат один, коллекционные принты"
 	end
+
 end

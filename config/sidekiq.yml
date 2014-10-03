@@ -1,0 +1,13 @@
+---
+:verbose: false
+:concurrency: 5
+:queues:
+  - [high, 7]
+  - [low, 5]
+  - [default, 3]
+:limits:
+  low: 4
+production:
+  :concurrency:  10
+  :pidfile: ./tmp/pids/sidekiq.pid
+  :logfile: ./log/sidekiq.log

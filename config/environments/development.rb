@@ -28,6 +28,6 @@ FormatOdin::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.delivery_method = :letter_opener
 
 end
