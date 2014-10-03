@@ -1,5 +1,7 @@
-- content_for :title do
-  = @artist.name
+/ - content_for(:title) do
+/   = "#{@artist.name}"
+
+- meta_tags_for(@artist)
 
 .artist-wrapper
   .artist-info

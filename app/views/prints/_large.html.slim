@@ -1,5 +1,7 @@
-- content_for(:title) do
-  = "#{print.title} | Автор: #{print.artist.name}"
+/ - content_for(:title) do
+/   = "#{print.title} | Автор: #{print.artist.name}"
+
+- meta_tags_for(print)
 
 .print-img
   - print.images.each do |img|
