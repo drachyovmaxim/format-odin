@@ -47,7 +47,7 @@ module ApplicationHelper
       title: "#{p.title} | Автор: #{p.artist.name} - Формат один, коллекционные принты",
       description: description,
       open_graph: {
-        title:       p.title,
+        title:       "#{p.title} - Формат один",
         description: description,
         type:        'website',
         image:       image,
