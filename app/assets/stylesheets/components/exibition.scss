@@ -5,12 +5,12 @@ $width-exibition-text: 700px;
   margin-top: -66px;
   position: relative;
   background: image_url("exibition/big.jpeg") no-repeat center center;
-  // background-attachment: fixed;
   background-size: cover;
   .menu {
     position: absolute;
     top: 20px; right: 0; left: 0;
     text-align: center;
+    padding: 0 !important;
   }
   li a {
     color: $color-gray-dark;
@@ -19,7 +19,7 @@ $width-exibition-text: 700px;
     display: inline-block;
     font-size: .85em;
     margin-left: 20px;
-    color: $color-gray-dark;
+    color: $color-gray-dark !important;
     cursor: pointer;
     &:first-child { margin-left: 0; }
   }
@@ -57,4 +57,24 @@ $width-exibition-text: 700px;
 
 .exibition-body img {
   width: 100%;
+}
+
+.exibition-wrapper {
+  .menu {
+    text-align: center;
+    padding: 20px;
+  }
+  li {
+    display: inline-block;
+    font-size: .85em;
+    margin-left: 20px;
+    cursor: pointer;
+    color: $color-link;
+    &:first-child { margin-left: 0; }
+  }
+  li a.active {
+    cursor: normal;
+    color: $color-black;
+    text-decoration: none; 
+  }
 }
