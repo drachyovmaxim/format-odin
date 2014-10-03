@@ -14,8 +14,8 @@ set :user,                'dev'
 set :forward_agent,       true
 set :deploy_to,           "/home/#{user}/apps/#{app}"
 set :repository,          "git@github.com:drachyovmaxim/format-odin.git"
-set :sidekiq_log,         "#{deploy_to}/log/sidekiq.log" }
-set :sidekiq_pid,         "#{deploy_to}/tmp/pids/sidekiq.pid" }
+set :sidekiq_log,         "#{deploy_to}/log/sidekiq.log"
+set :sidekiq_pid,         "#{deploy_to}/tmp/pids/sidekiq.pid"
 set :nginx_path,          '/etc/nginx'
 invoke :"env:#{server}"
 
