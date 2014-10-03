@@ -1,3 +1,20 @@
+@keyframes exibition-loading {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  60% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.exibition-wrapper { animation: exibition-loading .5s; }
+
 $width-exibition-body: 850px;
 $width-exibition-text: 700px;
 
