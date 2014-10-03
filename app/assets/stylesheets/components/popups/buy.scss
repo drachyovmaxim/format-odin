@@ -12,11 +12,7 @@
     z-index: 9999999;
   }
   .control-label {
-    display: block;
-    color: #222;
-    font-size: .85em;
-    margin-top: 25px;
-    text-align: center;
+    display: none;
   }
   .input {
     position: relative;
@@ -38,9 +34,9 @@
     outline: none;
     -webkit-appearance: none;
     font-size: .85em;
-    margin: 5px 0 0;
+    margin: 15px 0 0;
     border: 1px solid #ccc;
-    padding: 7px 10px;
+    padding: 10px 10px 6px;
     -webkit-font-smoothing: antialiased;
   }
   textarea {
@@ -51,5 +47,7 @@
     font-size: .75em;
     @include nowie_regular;
     position: relative !important;
+    top: 0 !important;
+    padding: 10px 15px !important;
   }
 }
