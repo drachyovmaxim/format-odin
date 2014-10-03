@@ -1,0 +1,35 @@
+@keyframes artist-loading {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  60% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+$width-artist-info: 650px;
+
+.artist-wrapper {
+  border-top: 1px solid $color-gray-light;
+  margin-top: 5px;
+  animation: artist-loading 2s;
+  .artist-info {
+    margin: $padding*2 auto;
+    max-width: $width-artist-info;
+  }
+  p {
+    font-size: 1em;
+    color: $color-gray-dark;
+    line-height: 1.5;
+    margin-top: $padding/3;
+  }
+  h2 {
+    margin-bottom: $padding/2;
+  }
+}
