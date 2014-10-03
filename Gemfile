@@ -28,6 +28,7 @@ gem 'kaminari'
 gem 'settingslogic'
 
 gem 'unidecoder'
+gem 'meta-tags', require: 'meta_tags'
 
 gem 'sinatra', '>= 1.3.0', :require => nil
 

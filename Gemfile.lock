@@ -132,6 +132,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta-tags (2.0.0)
+      actionpack (>= 3.0.0)
     mime-types (1.25.1)
     mina (0.3.0)
       open4
@@ -270,6 +272,7 @@ DEPENDENCIES
   i18n
   kaminari
   letter_opener_web (~> 1.2.0)
+  meta-tags
   mina-sidekiq
   mina-stack!
   mini_magick
