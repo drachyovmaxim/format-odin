@@ -8,14 +8,29 @@
   border: 8px solid transparent;
   padding-top: 120px;
   animation: border-color 40s infinite;
+  @include respond-to(handhelds) {
+    padding-top: 80px;
+  }
 
   ul li {
     display: inline-block;
     vertical-align: top;
     width: 50%;
     padding: 40px 120px;
+    @include respond-to(small) {
+      width: 100%;
+    }
+    @include respond-to(handhelds) {
+      padding: 20px 20px 40px;
+    }
     &:nth-child(2n) {
       padding: 250px 120px 0;
+      @include respond-to(small) {
+        padding: 40px 120px;
+      }
+      @include respond-to(handhelds) {
+        padding: 20px 20px 40px;
+      }
     }
     img {
       display: block;

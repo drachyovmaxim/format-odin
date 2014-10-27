@@ -58,3 +58,14 @@ $support-def:    true;
   @include сross-browser("transition", $text);
 }
 
+@mixin respond-to($media) {
+  @if $media == supersmall {
+    @media only screen and (max-width: $break-supersmall) { @content; }
+  }
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-middle) { @content; }
+  }
+  @if $media == small {
+    @media only screen and (max-width: $break-large) { @content; }
+  }
+}

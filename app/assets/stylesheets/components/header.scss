@@ -45,6 +45,11 @@
   right: 20px;
   left: 20px;
   z-index: 99;
+  #about-popup, #contacts-popup, .icon {
+    @include respond-to(handhelds) {
+      display: none;
+    }
+  }
   a { color: $color-white; }
   .logo {
     a { display: inline-block; }
