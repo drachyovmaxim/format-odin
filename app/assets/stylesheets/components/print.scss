@@ -33,7 +33,7 @@ $width-print-info: 460px;
 .print-wrapper {
   position: absolute;
   top: 0; right: 0; left: 0;
-  background: $color-body;
+  background: $color-body; 
   .back {
     z-index: 9999;
     cursor: pointer;
@@ -86,6 +86,9 @@ $width-print-info: 460px;
       width: 100%;
       padding-right: $width-print-info;
       animation: image-loading 1s;
+      @include respond-to (handhelds) {
+        padding-right: 0;
+      }
       img {
         width: 100%;
         display: block;
@@ -102,6 +105,10 @@ $width-print-info: 460px;
       animation: loading 1s;
       width: $width-print-info;
       background: $color-body;
+      @include respond-to (handhelds) {
+        position: relative;
+        width: 100%;
+      }
     }
     .print-buy {
       border-bottom: 1px solid #ddd;

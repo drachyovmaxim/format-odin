@@ -12,29 +12,32 @@
 
 @keyframes border-color {
   0% {
-    border-color: #38d5a4;
+    border-color: rgba(255,0,0,.4);
   }
-  20% {
-    border-color: #e35889;
+  10% {
+    border-color: rgba(255,0,255,.4);
   }
-  40% {
-    border-color: #3232b6;
+  30% {
+    border-color: rgba(0,0,255,.4);
   }
-  60% {
-    border-color: #65d632;
+  55% {
+    border-color: rgba(0,255,255,.4);
+  }
+  70% {
+    border-color: rgba(0,255,0,.4);
   }
   90% {
-    border-color: #f5aeb0;
+    border-color: rgba(255,255,0,.4);
   }
   100% {
-    border-color: #38d5a4;
+    border-color: rgba(255,0,0,.4);
   }
 }
 
 .header.home { display: none; }
 .header {
   padding: 40px 0 25px;
-  animation: body-gradient 40s infinite, border-color 40s infinite;
+  animation: body-gradient 15s infinite, border-color 15s infinite;
   max-width: 1200px;
   margin: 0 auto;
   border-bottom: 8px solid transparent;
@@ -45,6 +48,11 @@
   right: 20px;
   left: 20px;
   z-index: 99;
+  #about-popup, #contacts-popup, .icon {
+    @include respond-to(handhelds) {
+      display: none;
+    }
+  }
   a { color: $color-white; }
   .logo {
     a { display: inline-block; }
