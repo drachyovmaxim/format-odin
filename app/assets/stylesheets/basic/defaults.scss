@@ -6,28 +6,31 @@ html {
 
 @keyframes body-gradient {
   0% {
-    background: #f5aeb0;
+    background: #a77364;
   }
-  20% {
-    background: #e45889;
+  10% {
+    background: #a77379;
   }
-  40% {
-    background: #34817f;
+  30% {
+    background: #8e737e;
   }
-  60% {
-    background: #3232b6;
+  55% {
+    background: #8d8b7e;
+  }
+  70% {
+    background: #8f8d64;
   }
   90% {
-    background: #eea8c0;
+    background: #a58d64;
   }
   100% {
-    background: #f5aeb0;
+    background: #a77364;
   }
 }
 
 body {
   font-size: $font-size;
-  animation: body-gradient 40s infinite;
+  animation: body-gradient 15s infinite;
   @include nowie_regular;
   color: $color-black;
   -webkit-font-smoothing: antialiased;

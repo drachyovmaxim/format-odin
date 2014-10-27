@@ -7,7 +7,7 @@
   margin: 0 auto;
   border: 8px solid transparent;
   padding-top: 120px;
-  animation: border-color 40s infinite;
+  animation: border-color 15s infinite;
   @include respond-to(handhelds) {
     padding-top: 80px;
   }
