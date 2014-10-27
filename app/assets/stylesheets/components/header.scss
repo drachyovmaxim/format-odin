@@ -12,22 +12,25 @@
 
 @keyframes border-color {
   0% {
-    border-color: #38d5a4;
+    border-color: rgba(255,0,0,.4);
   }
-  20% {
-    border-color: #e35889;
+  10% {
+    border-color: rgba(255,0,255,.4);
   }
-  40% {
-    border-color: #3232b6;
+  30% {
+    border-color: rgba(0,0,255,.4);
   }
-  60% {
-    border-color: #65d632;
+  55% {
+    border-color: rgba(0,255,255,.4);
+  }
+  70% {
+    border-color: rgba(0,255,0,.4);
   }
   90% {
-    border-color: #f5aeb0;
+    border-color: rgba(255,255,0,.4);
   }
   100% {
-    border-color: #38d5a4;
+    border-color: rgba(255,0,0,.4);
   }
 }
 
