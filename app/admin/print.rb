@@ -12,6 +12,17 @@ ActiveAdmin.register Print do
   permit_params :title, :about, :description, :year, :price, :artist_id, :collection_id,
     images_attributes: [:id, :image, :image_cache, :_destroy]
 
+  config.sort_order = 'position_asc'
+  config.paginate   = false
+  sortable
+
+  index do
+    id_column
+    attrs.each { |a| column a }
+    actions
+    sortable_handle_column
+  end
+
   show do |print|
     attributes_table_for print do
       attrs.each { |a| row a }

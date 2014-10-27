@@ -3,7 +3,7 @@ class PrintsController < ApplicationController
     @prints = Print.all
   end
 
-  def exibition
+  def exhibition
   end
 
   def show

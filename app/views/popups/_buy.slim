@@ -8,5 +8,6 @@
         = f.input :email, placeholder: 'Email'
         = f.input :phone, placeholder: 'Телефон'
         = f.input :address, placeholder: 'Адрес'
+        = f.input :comment, placeholder: 'Комментарий'
         = f.hidden_field :print_id, value: print ? print.id : @print.id
         = f.submit 'Отправить заказ', class: 'button'

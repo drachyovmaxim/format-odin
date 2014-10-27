@@ -1,9 +1,22 @@
 class Order < ActiveRecord::Base
 
   belongs_to :print
-  validates_presence_of :print_id, :email
+  validates_presence_of :print_id
+  before_save :sanitize_inputs
+  after_create :notify_admin
 
-  def notify_admin
-    OrderNotificationsWorker.perform_async(self.id)
-  end
+  private
+    def notify_admin
+      OrderNotificationsWorker.perform_async(self.id)
+    end
+
+
+    def sanitize_inputs
+      [:email,:name,:address,:comment,:phone,:ip].each do |attr|
+        if self.send(attr).present?
+          sanitized = self.send(attr).gsub(/<|>/, '')
+          self.send("#{attr}=", sanitized)
+        end
+      end
+    end
 end

@@ -1,0 +1,128 @@
+.exhibition-wrapper
+  .exhibition-header
+    ul.menu
+      li = link_to 'Принты', root_path, class: ('active' if current_page?(root_path))
+      li = link_to 'Выставка', exhibition_path, class: ('active' if current_page?(exhibition_path))
+      li#about-popup О проекте
+      li#contacts-popup Контакты
+    h1 
+      | Формат один: перемены
+  .exhibition-body
+    h4
+      | С&nbsp;14 по&nbsp;21&nbsp;марта в&nbsp;Центральном выставочном зале Artplay прошла групповая выставка &laquo;Формат один: перемены&raquo;. Двадцать шесть молодых художников, объединенные в&nbsp;рамках экспозиции единым стандартизированным носителем&nbsp;&mdash; холстом одинакового размера на&nbsp;музейном подрамнике&#8202;-&#8202;исследовали тему перемен во&nbsp;всех ее&nbsp;аспектах.
+    = image_tag "exhibition/first.jpeg"
+    p
+      | Многие из&nbsp;участников уже добились признания на&nbsp;территории современного искусства внутри галерей, а&nbsp;некоторые занимают публичные пространства городских улиц своими работами, делая их&nbsp;доступными для более широкой аудитории. Исследование и&nbsp;переживание перемен, актуальных для художников, нашло свое отражение в&nbsp;работах, созданных специально для выставки &laquo;Формат один&raquo;. 
+    = image_tag "exhibition/second.jpeg"
+    p
+      | Одинаковый формат работ и&nbsp;единая цена, вне зависимости от&nbsp;известности того или иного автора, позволили посетителям <nobr>по-новому</nobr> взглянуть на&nbsp;формат групповой выставки.
+    = image_tag "exhibition/third.jpeg"
+
+  .carousel-wrapper.exhibition-color
+    .jcarousel-wrapper
+      .jcarousel-control-prev = image_tag("arrow_left.svg")
+      .jcarousel-control-next = image_tag("arrow_right.svg")
+      .jcarousel
+        ul
+          li
+            = image_tag "exhibition/works/1.jpg"
+          li
+            = image_tag "exhibition/works/2.jpg"
+          li
+            = image_tag "exhibition/works/3.jpg"
+          li
+            = image_tag "exhibition/works/4.jpg"
+          li
+            = image_tag "exhibition/works/5.jpg"
+          li
+            = image_tag "exhibition/works/6.jpg"
+          li
+            = image_tag "exhibition/works/7.jpg"
+          li
+            = image_tag "exhibition/works/8.jpg"
+          li
+            = image_tag "exhibition/works/9.jpg"
+          li
+            = image_tag "exhibition/works/10.jpg"
+          li
+            = image_tag "exhibition/works/11.jpg"
+          li
+            = image_tag "exhibition/works/12.jpg"
+          li
+            = image_tag "exhibition/works/13.jpg"
+          li
+            = image_tag "exhibition/works/14.jpg"
+          li
+            = image_tag "exhibition/works/15.jpg"
+          li
+            = image_tag "exhibition/works/16.jpg"
+          li
+            = image_tag "exhibition/works/17.jpg"
+          li
+            = image_tag "exhibition/works/18.jpg"
+          li
+            = image_tag "exhibition/works/19.jpg"
+          li
+            = image_tag "exhibition/works/20.jpg"
+          li
+            = image_tag "exhibition/works/21.jpg"
+          li
+            = image_tag "exhibition/works/22.jpg"
+          li
+            = image_tag "exhibition/works/23.jpg"
+          li
+            = image_tag "exhibition/works/24.jpg"
+          li
+            = image_tag "exhibition/works/25.jpg"
+          li
+            = image_tag "exhibition/works/26.jpg"
+          li
+            = image_tag "exhibition/works/27.jpg"
+          li
+            = image_tag "exhibition/works/28.jpg"
+          li
+            = image_tag "exhibition/works/29.jpg"
+          li
+            = image_tag "exhibition/works/30.jpg"
+          li
+            = image_tag "exhibition/works/31.jpg"
+          li
+            = image_tag "exhibition/works/32.jpg"
+          li
+            = image_tag "exhibition/works/33.jpg"
+          li
+            = image_tag "exhibition/works/34.jpg"
+          li
+            = image_tag "exhibition/works/35.jpg"
+          li
+            = image_tag "exhibition/works/36.jpg"
+          li
+            = image_tag "exhibition/works/37.jpg"
+          li
+            = image_tag "exhibition/works/38.jpg"
+          li
+            = image_tag "exhibition/works/39.jpg"
+          li
+            = image_tag "exhibition/works/40.jpg"
+          li
+            = image_tag "exhibition/works/41.jpg"
+          li
+            = image_tag "exhibition/works/42.jpg"
+          li
+            = image_tag "exhibition/works/43.jpg"
+          li
+            = image_tag "exhibition/works/44.jpg"
+          li
+            = image_tag "exhibition/works/45.jpg"
+          li
+            = image_tag "exhibition/works/46.jpg"
+          li
+            = image_tag "exhibition/works/47.jpg"
+          li
+            = image_tag "exhibition/works/48.jpg"
+
+  ul.menu
+    li = link_to 'Принты', root_path, class: ('active' if current_page?(root_path))
+    li = link_to 'Выставка', exhibition_path, class: ('active' if current_page?(exhibition_path))
+    li#about-popup О проекте
+    li#contacts-popup Контакты

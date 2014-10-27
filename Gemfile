@@ -16,6 +16,9 @@ gem 'sidekiq'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 
+gem 'acts_as_list'
+gem 'activeadmin-sortable'
+
 gem 'i18n'
 gem 'russian', '~> 0.6.0'
 

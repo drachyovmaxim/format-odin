@@ -9,13 +9,13 @@ FormatOdin::Application.routes.draw do
 
   ActiveAdmin.routes(self)
 
-  root 'home#index'
-
+  root 'prints#index'
   resources :artists, only: :show
-  resources :prints, only: [:index, :show]
+  resources :prints, only: [:show]
   resources :collections, only: :show
   resources :orders, only: :create
-  get 'exibition', to: 'prints#exibition', as: :exibition
+  get 'exhibition', to: 'prints#exhibition', as: :exhibition
+  get 'kaleidoscope', to: 'home#index', as: :kaleidoscope
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

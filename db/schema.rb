@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003142729) do
+ActiveRecord::Schema.define(version: 20141027201805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20141003142729) do
     t.string   "email"
     t.string   "name"
     t.string   "address"
-    t.string   "comment"
+    t.text     "comment"
     t.string   "phone"
     t.string   "ip"
     t.datetime "created_at"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 20141003142729) do
     t.datetime "updated_at"
     t.integer  "collection_id"
     t.string   "about"
+    t.integer  "position"
   end
 
   add_index "prints", ["collection_id"], name: "index_prints_on_collection_id", using: :btree
