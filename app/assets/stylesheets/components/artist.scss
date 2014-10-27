@@ -16,8 +16,7 @@
 $width-artist-info: 650px;
 
 .artist-wrapper {
-  border-top: 1px solid $color-gray-light;
-  margin-top: 5px;
+  margin-top: 164px;
   animation: artist-loading 2s;
   .artist-info {
     margin: $padding*2 auto;
@@ -25,11 +24,12 @@ $width-artist-info: 650px;
   }
   p {
     font-size: 1em;
-    color: $color-gray-dark;
+    color: $color-white;
     line-height: 1.5;
     margin-top: $padding/3;
   }
   h2 {
     margin-bottom: $padding/2;
+    color: $color-white;
   }
 }

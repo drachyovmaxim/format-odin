@@ -1,3 +1,7 @@
-.prints class="page-#{current_page}"
-  ul
-    = render @prints
+.main-page-prints
+  = render 'layouts/header'
+
+  .prints class="page-#{current_page}"
+    .border-prints
+    ul
+      = render @prints

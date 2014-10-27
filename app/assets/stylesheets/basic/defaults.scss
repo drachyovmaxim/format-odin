@@ -4,15 +4,35 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+@keyframes body-gradient {
+  0% {
+    background: #f5aeb0;
+  }
+  20% {
+    background: #e45889;
+  }
+  40% {
+    background: #34817f;
+  }
+  60% {
+    background: #3232b6;
+  }
+  90% {
+    background: #eea8c0;
+  }
+  100% {
+    background: #f5aeb0;
+  }
+}
+
 body {
   font-size: $font-size;
-  background: $color-body;
+  animation: body-gradient 40s infinite;
   @include nowie_regular;
   color: $color-black;
   -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
-  min-width: 700px;
 }
 
 * {
