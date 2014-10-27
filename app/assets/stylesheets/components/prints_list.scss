@@ -1,82 +1,143 @@
-@keyframes prints-loading {
-  0% {
-    transform: translate3d(50%, -50%, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(-50%, -50%, 0);
-    opacity: 1;
-  }
+.main-page-prints {
+  padding: 20px;
 }
 
 .prints {
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  left: 50%; top: 53%;
-  transform: translate3d(-50%, -50%, 0);
-  animation: prints-loading 1s;
-}
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 8px solid transparent;
+  padding-top: 120px;
+  animation: border-color 40s infinite;
 
-.prints ul {
-  float: left;
-  white-space: nowrap;
-}
-
-.prints  ul li{
-  display: inline-block;
-  vertical-align: middle;
-  width: 650px;
-  margin: 0 $padding*3 0 40px;
-  white-space: nowrap;
-}
-
-.prints {
-  .print-img, .print-info {
+  ul li {
     display: inline-block;
-    vertical-align: middle;
-  }
-  h2 a {
-    color: $color-black;
-    &:hover {
-      color: $color-link;
+    vertical-align: top;
+    width: 50%;
+    padding: 40px 120px;
+    &:nth-child(2n) {
+      padding: 250px 120px 0;
+    }
+    img {
+      display: block;
+      width: 100%;
     }
   }
-  p {
-    color: $color-gray-dark;
-    font-size: $font-size-small;
-    line-height: 1.6;
-  }
-  img {
-    width: 100%;
-  }
+
   .print-img {
-    width: 55%;
-    margin-right: 6%;
+    position: relative;
   }
+
+  .hover-link {
+    &:hover .print-img .print-info {   
+      display: block;
+      z-index: 9999999999;
+    }
+  }
+
   .print-info {
-    width: 39%;
-    white-space: normal;
+    animation: body-gradient 40s infinite;
+    padding: 15px;
+    text-align: center;
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    a {
+      color: $color-white;
+    }
+    .artist a {
+      opacity: .8;
+      font-size: .85em;
+    }
+    .price {
+      color: $color-white;
+      margin-top: 10px;
+      font-size: .85em;
+    }
   }
-  .artist-info {
-    font-size: .85em;
-    @include nowie_light;
-    color: $color-gray-dark;
-    margin-top: $padding/2;
-  }
-  .artist {
-    margin-left: 5px;
-    @include nowie_regular;
-  }
-  .artist-title, .artist {
-    display: inline-block;
-  }
-  .price, .history, .buy {
-    margin-top: $padding/2;
-    font-size: .85em;
-  }
-  .buy { margin-top: 5px; }
 }
+
+
+
+// @keyframes prints-loading {
+//   0% {
+//     transform: translate3d(50%, -50%, 0);
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translate3d(-50%, -50%, 0);
+//     opacity: 1;
+//   }
+// }
+
+// .prints {
+//   width: 100%;
+//   overflow: hidden;
+//   position: absolute;
+//   left: 50%; top: 53%;
+//   transform: translate3d(-50%, -50%, 0);
+//   animation: prints-loading 1s;
+// }
+
+// .prints ul {
+//   float: left;
+//   white-space: nowrap;
+// }
+
+// .prints  ul li{
+//   display: inline-block;
+//   vertical-align: middle;
+//   width: 650px;
+//   margin: 0 $padding*3 0 40px;
+//   white-space: nowrap;
+// }
+
+// .prints {
+//   .print-img, .print-info {
+//     display: inline-block;
+//     vertical-align: middle;
+//   }
+//   h2 a {
+//     color: $color-black;
+//     &:hover {
+//       color: $color-link;
+//     }
+//   }
+//   p {
+//     color: $color-gray-dark;
+//     font-size: $font-size-small;
+//     line-height: 1.6;
+//   }
+//   img {
+//     width: 100%;
+//   }
+//   .print-img {
+//     width: 55%;
+//     margin-right: 6%;
+//   }
+//   .print-info {
+//     width: 39%;
+//     white-space: normal;
+//   }
+//   .artist-info {
+//     font-size: .85em;
+//     @include nowie_light;
+//     color: $color-gray-dark;
+//     margin-top: $padding/2;
+//   }
+//   .artist {
+//     margin-left: 5px;
+//     @include nowie_regular;
+//   }
+//   .artist-title, .artist {
+//     display: inline-block;
+//   }
+//   .price, .history, .buy {
+//     margin-top: $padding/2;
+//     font-size: .85em;
+//   }
+//   .buy { margin-top: 5px; }
+// }

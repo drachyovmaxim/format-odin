@@ -13,7 +13,10 @@
   }
 }
 
-.exibition-wrapper { animation: exibition-loading .5s; }
+.exibition-wrapper {
+  animation: exibition-loading .5s;
+  background: $color-body;
+}
 
 $width-exibition-body: 850px;
 $width-exibition-text: 700px;
