@@ -48,7 +48,10 @@
   right: 20px;
   left: 20px;
   z-index: 99;
-  #about-popup, #contacts-popup, .icon {
+  @include respond-to(handhelds) {
+    padding: 30px 0 15px;
+  }
+  #about-popup, #contacts-popup, .kalei-link {
     @include respond-to(handhelds) {
       display: none;
     }
@@ -64,6 +67,7 @@
   .menu {
     position: absolute;
     top: 34px; right: 0;
+    @include respond-to(handhelds) { top: 25px; }
   }
   li {
     display: inline-block;
