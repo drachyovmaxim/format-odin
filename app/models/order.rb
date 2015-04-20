@@ -7,9 +7,8 @@ class Order < ActiveRecord::Base
 
   private
     def notify_admin
-      OrderNotificationsWorker.perform_async(self.id)
+      OrderMailer.to_admin(self).deliver
     end
-
 
     def sanitize_inputs
       [:email,:name,:address,:comment,:phone,:ip].each do |attr|
