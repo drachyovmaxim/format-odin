@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 gem 'pg'
 gem 'puma'
+gem 'puma_worker_killer'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'sass-rails', '~> 4.0.2'
@@ -12,7 +13,6 @@ gem 'autoprefixer-rails'
 
 gem 'redis'
 gem 'redis-namespace'
-gem 'sidekiq'
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 

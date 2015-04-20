@@ -25,13 +25,10 @@ set :branch, ENV['at']  if ENV['at']
 set :server_stack,                  %w(
                                       nginx
                                       postgresql
-                                      redis
                                       rbenv
                                       puma
-                                      sidekiq
                                       imagemagick
                                       memcached
-                                      monit
                                       node
                                       bower
                                     )
@@ -42,16 +39,13 @@ set :shared_paths,                  %w(
                                       config/puma.rb
                                       config/database.yml
                                       config/application.yml
-                                      config/sidekiq.yml
                                       public/uploads
                                     )
 
 set :monitored,                     %w(
                                       nginx
                                       postgresql
-                                      redis
                                       puma
-                                      sidekiq
                                       memcached
                                     )
 
@@ -62,7 +56,6 @@ end
 desc "Deploys the current version to the server."
 task :deploy do
   deploy do
-    invoke :'sidekiq:quiet'
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'bundle:install'
@@ -71,8 +64,7 @@ task :deploy do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      invoke :'puma:restart'
-      invoke :'sidekiq:restart'
+      invoke :'puma:phasedrestart'
     end
   end
 end
