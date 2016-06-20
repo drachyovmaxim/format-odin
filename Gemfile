@@ -5,6 +5,8 @@ gem 'pg'
 gem 'puma'
 gem 'puma_worker_killer'
 
+gem 'mailgun_rails'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'sass-rails', '~> 4.0.2'
 gem 'coffee-rails', '~> 4.0.0'
@@ -33,15 +35,13 @@ gem 'settingslogic'
 gem 'unidecoder'
 gem 'meta-tags', require: 'meta_tags'
 
-gem 'sinatra', '>= 1.3.0', :require => nil
-
 gem 'foreman'
 
 group :development do
-	gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'mina-stack', github: 'div/mina-stack'
   gem 'mina-sidekiq'
-	gem 'letter_opener_web', '~> 1.2.0'
+        gem 'letter_opener_web', '~> 1.2.0'
 end

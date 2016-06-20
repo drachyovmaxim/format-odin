@@ -79,13 +79,9 @@ FormatOdin::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
-    :port      => 587,
-    :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => "3141n1@gmail.com",
-    :password  => "nmAKbYh0BJCLqUV_G_VakQ", # SMTP password is any valid API key
-    :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'format1.net', # your domain to identify your server when connecting
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: 'key-e694f48bac7dfb54c8a096455bde1a38',
+    domain: 'format1.net'
   }
 end
