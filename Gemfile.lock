@@ -18,6 +18,7 @@ GIT
 GIT
   remote: git://github.com/div/mina-stack.git
   revision: fdade989c6f38a38fbb471ed5657bdd08ac681a5
+  ref: fdade989c6f38a38fbb471ed5657bdd08ac681a5
   specs:
     mina-stack (0.0.1)
       highline
@@ -111,7 +112,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
-    highline (1.6.21)
+    highline (1.7.8)
     hike (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)

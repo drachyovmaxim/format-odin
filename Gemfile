@@ -41,7 +41,7 @@ group :development do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'mina-stack', github: 'div/mina-stack'
+  gem 'mina-stack', github: 'div/mina-stack', ref: 'fdade989c6f38a38fbb471ed5657bdd08ac681a5'
   gem 'mina-sidekiq'
-        gem 'letter_opener_web', '~> 1.2.0'
+  gem 'letter_opener_web', '~> 1.2.0'
 end
