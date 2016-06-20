@@ -1,9 +1,8 @@
 GIT
   remote: git://github.com/achernik/mina-stack.git
-  revision: fdade989c6f38a38fbb471ed5657bdd08ac681a5
-  ref: fdade989c6f38a38fbb471ed5657bdd08ac681a5
+  revision: 8b0c2459825903447bf8a14af0707020be55e455
   specs:
-    mina-stack (0.0.1)
+    mina-stack (0.0.1.wtf)
       highline
       mina
       rake
